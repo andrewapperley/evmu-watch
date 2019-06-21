@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0F39F3A322BA596900782403 /* gyro_file_x86.inl in Resources */ = {isa = PBXBuildFile; fileRef = 0F39F3A222BA596900782403 /* gyro_file_x86.inl */; };
-		0F39F3A522BA5A8900782403 /* minigame.VMI in Resources */ = {isa = PBXBuildFile; fileRef = 0F39F3A422BA5A8900782403 /* minigame.VMI */; };
 		0F520C2522B57D390054BBFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C2422B57D390054BBFC /* AppDelegate.swift */; };
 		0F520C2722B57D390054BBFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C2622B57D390054BBFC /* ViewController.swift */; };
 		0F520C2A22B57D390054BBFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F520C2822B57D390054BBFC /* Main.storyboard */; };
@@ -63,14 +62,15 @@
 		0F52100C22B68B650054BBFC /* gyro_file.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F52100B22B68B650054BBFC /* gyro_file.c */; };
 		0F52101022B68BBE0054BBFC /* turfs_strings.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F52100D22B68BBE0054BBFC /* turfs_strings.c */; };
 		0F52101122B68BBE0054BBFC /* turfs_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F52100E22B68BBE0054BBFC /* turfs_common.c */; };
-		0F52101222B68BBE0054BBFC /* turfs_file_stdio.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F52100F22B68BBE0054BBFC /* turfs_file_stdio.c */; };
 		0F52101722B68C220054BBFC /* turfs_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F52101622B68C220054BBFC /* turfs_ios.mm */; };
 		0F52101C22B68DC50054BBFC /* gyro_input_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F52101B22B68DC50054BBFC /* gyro_input_ios.mm */; };
 		0F52101E22B68EEE0054BBFC /* gyro_timer.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F52101D22B68EEE0054BBFC /* gyro_timer.c */; };
 		0F52102022B68F660054BBFC /* gyro_system.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F52101F22B68F660054BBFC /* gyro_system.c */; };
 		0F52102422B68FEA0054BBFC /* gyro_debug_ios.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F52102322B68FEA0054BBFC /* gyro_debug_ios.c */; };
-		0F52102822B69B180054BBFC /* minigame.VMS in Resources */ = {isa = PBXBuildFile; fileRef = 0F52102722B69B180054BBFC /* minigame.VMS */; };
-		0F932C4F22BA7E1800DA4149 /* minigame.zip in Resources */ = {isa = PBXBuildFile; fileRef = 0F932C4D22BA7E0000DA4149 /* minigame.zip */; };
+		0F52102822B69B180054BBFC /* minigame.vms in Resources */ = {isa = PBXBuildFile; fileRef = 0F52102722B69B180054BBFC /* minigame.vms */; };
+		0F932CE522BD100300DA4149 /* turfs_file_stdio.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F932CE422BD100300DA4149 /* turfs_file_stdio.c */; };
+		0F932CE722BD2C1700DA4149 /* minigame.vmi in Resources */ = {isa = PBXBuildFile; fileRef = 0F932CE622BD2C1700DA4149 /* minigame.vmi */; };
+		0F932CE922BD2C6B00DA4149 /* minigame.dci in Resources */ = {isa = PBXBuildFile; fileRef = 0F932CE822BD2C6B00DA4149 /* minigame.dci */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,7 +117,6 @@
 
 /* Begin PBXFileReference section */
 		0F39F3A222BA596900782403 /* gyro_file_x86.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gyro_file_x86.inl; sourceTree = "<group>"; };
-		0F39F3A422BA5A8900782403 /* minigame.VMI */ = {isa = PBXFileReference; lastKnownFileType = file; path = minigame.VMI; sourceTree = "<group>"; };
 		0F39F3A622BA5F9E00782403 /* evmu-watch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "evmu-watch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		0F520C2122B57D390054BBFC /* evmu-watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "evmu-watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F520C2422B57D390054BBFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -219,7 +218,6 @@
 		0F52100B22B68B650054BBFC /* gyro_file.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gyro_file.c; sourceTree = "<group>"; };
 		0F52100D22B68BBE0054BBFC /* turfs_strings.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = turfs_strings.c; sourceTree = "<group>"; };
 		0F52100E22B68BBE0054BBFC /* turfs_common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = turfs_common.c; sourceTree = "<group>"; };
-		0F52100F22B68BBE0054BBFC /* turfs_file_stdio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = turfs_file_stdio.c; sourceTree = "<group>"; };
 		0F52101322B68BCE0054BBFC /* turfs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = turfs.h; sourceTree = "<group>"; };
 		0F52101422B68BCE0054BBFC /* turfs_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = turfs_version.h; sourceTree = "<group>"; };
 		0F52101622B68C220054BBFC /* turfs_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = turfs_ios.mm; sourceTree = "<group>"; };
@@ -230,10 +228,12 @@
 		0F52102222B68FB90054BBFC /* gyro_system_callbacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_system_callbacks.h; sourceTree = "<group>"; };
 		0F52102322B68FEA0054BBFC /* gyro_debug_ios.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gyro_debug_ios.c; sourceTree = "<group>"; };
 		0F52102522B691C40054BBFC /* Evmu-watch-bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Evmu-watch-bridging-header.h"; sourceTree = "<group>"; };
-		0F52102722B69B180054BBFC /* minigame.VMS */ = {isa = PBXFileReference; explicitFileType = text; path = minigame.VMS; sourceTree = "<group>"; };
+		0F52102722B69B180054BBFC /* minigame.vms */ = {isa = PBXFileReference; lastKnownFileType = file; path = minigame.vms; sourceTree = "<group>"; };
 		0F932C4722BA79EB00DA4149 /* evmu-watch WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "evmu-watch WatchKit App.entitlements"; sourceTree = "<group>"; };
 		0F932C4822BA79EF00DA4149 /* evmu-watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "evmu-watch.entitlements"; sourceTree = "<group>"; };
-		0F932C4D22BA7E0000DA4149 /* minigame.zip */ = {isa = PBXFileReference; explicitFileType = compiled; path = minigame.zip; sourceTree = "<group>"; };
+		0F932CE422BD100300DA4149 /* turfs_file_stdio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = turfs_file_stdio.c; sourceTree = "<group>"; };
+		0F932CE622BD2C1700DA4149 /* minigame.vmi */ = {isa = PBXFileReference; lastKnownFileType = file; path = minigame.vmi; sourceTree = "<group>"; };
+		0F932CE822BD2C6B00DA4149 /* minigame.dci */ = {isa = PBXFileReference; lastKnownFileType = file; path = minigame.dci; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -480,10 +480,10 @@
 		0F52100222B59FAF0054BBFC /* common */ = {
 			isa = PBXGroup;
 			children = (
+				0F932CE422BD100300DA4149 /* turfs_file_stdio.c */,
 				0F52102222B68FB90054BBFC /* gyro_system_callbacks.h */,
 				0F52101822B68C710054BBFC /* internal.h */,
 				0F52100E22B68BBE0054BBFC /* turfs_common.c */,
-				0F52100F22B68BBE0054BBFC /* turfs_file_stdio.c */,
 				0F52100D22B68BBE0054BBFC /* turfs_strings.c */,
 				0F52100322B59FAF0054BBFC /* gyro_matrix_stack.c */,
 				0F52100722B689520054BBFC /* gyro_visual_memory_common.c */,
@@ -507,9 +507,9 @@
 		0F52102622B69B180054BBFC /* files */ = {
 			isa = PBXGroup;
 			children = (
-				0F932C4D22BA7E0000DA4149 /* minigame.zip */,
-				0F39F3A422BA5A8900782403 /* minigame.VMI */,
-				0F52102722B69B180054BBFC /* minigame.VMS */,
+				0F932CE822BD2C6B00DA4149 /* minigame.dci */,
+				0F932CE622BD2C1700DA4149 /* minigame.vmi */,
+				0F52102722B69B180054BBFC /* minigame.vms */,
 			);
 			path = files;
 			sourceTree = "<group>";
@@ -650,14 +650,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F932C4F22BA7E1800DA4149 /* minigame.zip in Resources */,
 				0F520FFB22B59B380054BBFC /* gyro_matrix_sse_x86.inl in Resources */,
 				0F520CCD22B57EDB0054BBFC /* .gitmodules in Resources */,
-				0F39F3A522BA5A8900782403 /* minigame.VMI in Resources */,
 				0F52100022B59C4E0054BBFC /* gyro_video_ios.inl in Resources */,
+				0F932CE922BD2C6B00DA4149 /* minigame.dci in Resources */,
 				0F52100122B59C4E0054BBFC /* gyro_input_ios.inl in Resources */,
 				0F520FF822B5967E0054BBFC /* gyro_math_common.inl in Resources */,
-				0F52102822B69B180054BBFC /* minigame.VMS in Resources */,
+				0F52102822B69B180054BBFC /* minigame.vms in Resources */,
+				0F932CE722BD2C1700DA4149 /* minigame.vmi in Resources */,
 				0F520C4C22B57D3B0054BBFC /* Assets.xcassets in Resources */,
 				0F39F3A322BA596900782403 /* gyro_file_x86.inl in Resources */,
 			);
@@ -691,6 +691,7 @@
 				0F520CC322B57EDB0054BBFC /* gyro_vmu_port7.c in Sources */,
 				0F520CB722B57EDB0054BBFC /* gyro_vmu_lcd.c in Sources */,
 				0F52100622B5A17C0054BBFC /* gyro_audio_al.c in Sources */,
+				0F932CE522BD100300DA4149 /* turfs_file_stdio.c in Sources */,
 				0F520CB322B57EDB0054BBFC /* gyro_vmu_device.c in Sources */,
 				0F520CCA22B57EDB0054BBFC /* gyro_vmu_version.c in Sources */,
 				0F52100422B59FAF0054BBFC /* gyro_matrix_stack.c in Sources */,
@@ -714,7 +715,6 @@
 				0F52101722B68C220054BBFC /* turfs_ios.mm in Sources */,
 				0F520CBD22B57EDB0054BBFC /* gyro_vmu_tcp.c in Sources */,
 				0F520CC722B57EDB0054BBFC /* gyro_vmu_buzzer.c in Sources */,
-				0F52101222B68BBE0054BBFC /* turfs_file_stdio.c in Sources */,
 				0F52102022B68F660054BBFC /* gyro_system.c in Sources */,
 				0F520CB222B57EDB0054BBFC /* gyro_vmu_disassembler.c in Sources */,
 				0F520FEB22B587DB0054BBFC /* gyro_timer_api.c in Sources */,
