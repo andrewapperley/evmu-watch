@@ -1,0 +1,1070 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F39F3A322BA596900782403 /* gyro_file_x86.inl in Resources */ = {isa = PBXBuildFile; fileRef = 0F39F3A222BA596900782403 /* gyro_file_x86.inl */; };
+		0F39F3A522BA5A8900782403 /* minigame.VMI in Resources */ = {isa = PBXBuildFile; fileRef = 0F39F3A422BA5A8900782403 /* minigame.VMI */; };
+		0F520C2522B57D390054BBFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C2422B57D390054BBFC /* AppDelegate.swift */; };
+		0F520C2722B57D390054BBFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C2622B57D390054BBFC /* ViewController.swift */; };
+		0F520C2A22B57D390054BBFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F520C2822B57D390054BBFC /* Main.storyboard */; };
+		0F520C2C22B57D390054BBFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F520C2B22B57D390054BBFC /* Assets.xcassets */; };
+		0F520C2F22B57D390054BBFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F520C2D22B57D390054BBFC /* LaunchScreen.storyboard */; };
+		0F520C3422B57D390054BBFC /* evmu-watch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0F520C3322B57D390054BBFC /* evmu-watch WatchKit App.app */; };
+		0F520C3A22B57D390054BBFC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F520C3822B57D390054BBFC /* Interface.storyboard */; };
+		0F520C3C22B57D3A0054BBFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F520C3B22B57D3A0054BBFC /* Assets.xcassets */; };
+		0F520C4322B57D3A0054BBFC /* evmu-watch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0F520C4222B57D3A0054BBFC /* evmu-watch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0F520C4822B57D3A0054BBFC /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C4722B57D3A0054BBFC /* InterfaceController.swift */; };
+		0F520C4A22B57D3A0054BBFC /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C4922B57D3A0054BBFC /* ExtensionDelegate.swift */; };
+		0F520C4C22B57D3B0054BBFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F520C4B22B57D3B0054BBFC /* Assets.xcassets */; };
+		0F520CB222B57EDB0054BBFC /* gyro_vmu_disassembler.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C8522B57EDB0054BBFC /* gyro_vmu_disassembler.c */; };
+		0F520CB322B57EDB0054BBFC /* gyro_vmu_device.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C8622B57EDB0054BBFC /* gyro_vmu_device.c */; };
+		0F520CB422B57EDB0054BBFC /* gyro_vmu_extra_bg_pvr.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C8722B57EDB0054BBFC /* gyro_vmu_extra_bg_pvr.c */; };
+		0F520CB522B57EDB0054BBFC /* gyro_vmu_bios.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C8822B57EDB0054BBFC /* gyro_vmu_bios.c */; };
+		0F520CB622B57EDB0054BBFC /* gyro_vmu_port1.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C8922B57EDB0054BBFC /* gyro_vmu_port1.c */; };
+		0F520CB722B57EDB0054BBFC /* gyro_vmu_lcd.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C8A22B57EDB0054BBFC /* gyro_vmu_lcd.c */; };
+		0F520CB822B57EDB0054BBFC /* gyro_vmu_pso_img.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C8B22B57EDB0054BBFC /* gyro_vmu_pso_img.c */; };
+		0F520CB922B57EDB0054BBFC /* gyro_vmu_timers.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C8C22B57EDB0054BBFC /* gyro_vmu_timers.c */; };
+		0F520CBA22B57EDB0054BBFC /* gyro_vmu_gamepad.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C8D22B57EDB0054BBFC /* gyro_vmu_gamepad.c */; };
+		0F520CBB22B57EDB0054BBFC /* gyro_vmu_icondata.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C8E22B57EDB0054BBFC /* gyro_vmu_icondata.c */; };
+		0F520CBC22B57EDB0054BBFC /* gyro_vmu_display.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C8F22B57EDB0054BBFC /* gyro_vmu_display.c */; };
+		0F520CBD22B57EDB0054BBFC /* gyro_vmu_tcp.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C9022B57EDB0054BBFC /* gyro_vmu_tcp.c */; };
+		0F520CBE22B57EDB0054BBFC /* gyro_vmu_vms.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C9122B57EDB0054BBFC /* gyro_vmu_vms.c */; };
+		0F520CBF22B57EDB0054BBFC /* gyro_vmu_memory.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C9222B57EDB0054BBFC /* gyro_vmu_memory.c */; };
+		0F520CC022B57EDB0054BBFC /* gyro_vmu_util.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C9322B57EDB0054BBFC /* gyro_vmu_util.c */; };
+		0F520CC122B57EDB0054BBFC /* gyro_vmu_isr.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C9422B57EDB0054BBFC /* gyro_vmu_isr.c */; };
+		0F520CC222B57EDB0054BBFC /* gyro_vmu_serial.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C9522B57EDB0054BBFC /* gyro_vmu_serial.c */; };
+		0F520CC322B57EDB0054BBFC /* gyro_vmu_port7.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C9622B57EDB0054BBFC /* gyro_vmu_port7.c */; };
+		0F520CC422B57EDB0054BBFC /* gyro_vmu_flash.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C9722B57EDB0054BBFC /* gyro_vmu_flash.c */; };
+		0F520CC522B57EDB0054BBFC /* gyro_vmu_cpu.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C9822B57EDB0054BBFC /* gyro_vmu_cpu.c */; };
+		0F520CC622B57EDB0054BBFC /* gyro_vmu_vmi.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C9922B57EDB0054BBFC /* gyro_vmu_vmi.c */; };
+		0F520CC722B57EDB0054BBFC /* gyro_vmu_buzzer.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C9A22B57EDB0054BBFC /* gyro_vmu_buzzer.c */; };
+		0F520CC822B57EDB0054BBFC /* gyro_vmu_battery.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C9B22B57EDB0054BBFC /* gyro_vmu_battery.c */; };
+		0F520CC922B57EDB0054BBFC /* gyro_vmu_instr.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C9C22B57EDB0054BBFC /* gyro_vmu_instr.c */; };
+		0F520CCA22B57EDB0054BBFC /* gyro_vmu_version.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C9D22B57EDB0054BBFC /* gyro_vmu_version.c */; };
+		0F520CCB22B57EDB0054BBFC /* gyro_vmu_maple.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C9E22B57EDB0054BBFC /* gyro_vmu_maple.c */; };
+		0F520CCC22B57EDB0054BBFC /* gyro_vmu_osc.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C9F22B57EDB0054BBFC /* gyro_vmu_osc.c */; };
+		0F520CCD22B57EDB0054BBFC /* .gitmodules in Resources */ = {isa = PBXBuildFile; fileRef = 0F520CA022B57EDB0054BBFC /* .gitmodules */; };
+		0F520FDB22B586480054BBFC /* gyro_system_api.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520FDA22B586480054BBFC /* gyro_system_api.c */; };
+		0F520FE722B5878C0054BBFC /* gyro_visual_memory_api.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520FE622B5878C0054BBFC /* gyro_visual_memory_api.c */; };
+		0F520FEB22B587DB0054BBFC /* gyro_timer_api.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520FEA22B587DB0054BBFC /* gyro_timer_api.c */; };
+		0F520FF822B5967E0054BBFC /* gyro_math_common.inl in Resources */ = {isa = PBXBuildFile; fileRef = 0F520FF722B5967E0054BBFC /* gyro_math_common.inl */; };
+		0F520FFB22B59B380054BBFC /* gyro_matrix_sse_x86.inl in Resources */ = {isa = PBXBuildFile; fileRef = 0F520FFA22B59B380054BBFC /* gyro_matrix_sse_x86.inl */; };
+		0F52100022B59C4E0054BBFC /* gyro_video_ios.inl in Resources */ = {isa = PBXBuildFile; fileRef = 0F520FFE22B59C4E0054BBFC /* gyro_video_ios.inl */; };
+		0F52100122B59C4E0054BBFC /* gyro_input_ios.inl in Resources */ = {isa = PBXBuildFile; fileRef = 0F520FFF22B59C4E0054BBFC /* gyro_input_ios.inl */; };
+		0F52100422B59FAF0054BBFC /* gyro_matrix_stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F52100322B59FAF0054BBFC /* gyro_matrix_stack.c */; };
+		0F52100622B5A17C0054BBFC /* gyro_audio_al.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F52100522B5A17C0054BBFC /* gyro_audio_al.c */; };
+		0F52100822B689520054BBFC /* gyro_visual_memory_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F52100722B689520054BBFC /* gyro_visual_memory_common.c */; };
+		0F52100A22B68A4F0054BBFC /* gyro_net_ios.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F52100922B68A4F0054BBFC /* gyro_net_ios.c */; };
+		0F52100C22B68B650054BBFC /* gyro_file.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F52100B22B68B650054BBFC /* gyro_file.c */; };
+		0F52101022B68BBE0054BBFC /* turfs_strings.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F52100D22B68BBE0054BBFC /* turfs_strings.c */; };
+		0F52101122B68BBE0054BBFC /* turfs_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F52100E22B68BBE0054BBFC /* turfs_common.c */; };
+		0F52101222B68BBE0054BBFC /* turfs_file_stdio.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F52100F22B68BBE0054BBFC /* turfs_file_stdio.c */; };
+		0F52101722B68C220054BBFC /* turfs_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F52101622B68C220054BBFC /* turfs_ios.mm */; };
+		0F52101C22B68DC50054BBFC /* gyro_input_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F52101B22B68DC50054BBFC /* gyro_input_ios.mm */; };
+		0F52101E22B68EEE0054BBFC /* gyro_timer.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F52101D22B68EEE0054BBFC /* gyro_timer.c */; };
+		0F52102022B68F660054BBFC /* gyro_system.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F52101F22B68F660054BBFC /* gyro_system.c */; };
+		0F52102422B68FEA0054BBFC /* gyro_debug_ios.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F52102322B68FEA0054BBFC /* gyro_debug_ios.c */; };
+		0F52102822B69B180054BBFC /* minigame.VMS in Resources */ = {isa = PBXBuildFile; fileRef = 0F52102722B69B180054BBFC /* minigame.VMS */; };
+		0F932C4F22BA7E1800DA4149 /* minigame.zip in Resources */ = {isa = PBXBuildFile; fileRef = 0F932C4D22BA7E0000DA4149 /* minigame.zip */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0F520C3522B57D390054BBFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F520C1922B57D390054BBFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F520C3222B57D390054BBFC;
+			remoteInfo = "evmu-watch WatchKit App";
+		};
+		0F520C4422B57D3A0054BBFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F520C1922B57D390054BBFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F520C4122B57D3A0054BBFC;
+			remoteInfo = "evmu-watch WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0F520C5322B57D3B0054BBFC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0F520C4322B57D3A0054BBFC /* evmu-watch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F520C5722B57D3B0054BBFC /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				0F520C3422B57D390054BBFC /* evmu-watch WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0F39F3A222BA596900782403 /* gyro_file_x86.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gyro_file_x86.inl; sourceTree = "<group>"; };
+		0F39F3A422BA5A8900782403 /* minigame.VMI */ = {isa = PBXFileReference; lastKnownFileType = file; path = minigame.VMI; sourceTree = "<group>"; };
+		0F39F3A622BA5F9E00782403 /* evmu-watch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "evmu-watch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		0F520C2122B57D390054BBFC /* evmu-watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "evmu-watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F520C2422B57D390054BBFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0F520C2622B57D390054BBFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0F520C2922B57D390054BBFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0F520C2B22B57D390054BBFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0F520C2E22B57D390054BBFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0F520C3022B57D390054BBFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F520C3322B57D390054BBFC /* evmu-watch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "evmu-watch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F520C3922B57D390054BBFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		0F520C3B22B57D3A0054BBFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0F520C3D22B57D3A0054BBFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F520C4222B57D3A0054BBFC /* evmu-watch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "evmu-watch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F520C4722B57D3A0054BBFC /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		0F520C4922B57D3A0054BBFC /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		0F520C4B22B57D3B0054BBFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0F520C4D22B57D3B0054BBFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F520C6722B57EDB0054BBFC /* gyro_vmu_memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_memory.h; sourceTree = "<group>"; };
+		0F520C6822B57EDB0054BBFC /* gyro_vmu_adapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_adapter.h; sourceTree = "<group>"; };
+		0F520C6922B57EDB0054BBFC /* gyro_vmu_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_util.h; sourceTree = "<group>"; };
+		0F520C6A22B57EDB0054BBFC /* gyro_vmu_isr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_isr.h; sourceTree = "<group>"; };
+		0F520C6B22B57EDB0054BBFC /* gyro_vmu_serial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_serial.h; sourceTree = "<group>"; };
+		0F520C6C22B57EDB0054BBFC /* gyro_vmu_port7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_port7.h; sourceTree = "<group>"; };
+		0F520C6D22B57EDB0054BBFC /* gyro_vmu_buzzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_buzzer.h; sourceTree = "<group>"; };
+		0F520C6E22B57EDB0054BBFC /* gyro_vmu_instr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_instr.h; sourceTree = "<group>"; };
+		0F520C6F22B57EDB0054BBFC /* gyro_vmu_battery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_battery.h; sourceTree = "<group>"; };
+		0F520C7022B57EDB0054BBFC /* gyro_vmu_vmi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_vmi.h; sourceTree = "<group>"; };
+		0F520C7122B57EDB0054BBFC /* gyro_vmu_cpu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_cpu.h; sourceTree = "<group>"; };
+		0F520C7222B57EDB0054BBFC /* gyro_vmu_flash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_flash.h; sourceTree = "<group>"; };
+		0F520C7322B57EDB0054BBFC /* gyro_vmu_osc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_osc.h; sourceTree = "<group>"; };
+		0F520C7422B57EDB0054BBFC /* gyro_vmu_sfr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_sfr.h; sourceTree = "<group>"; };
+		0F520C7522B57EDB0054BBFC /* gyro_vmu_maple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_maple.h; sourceTree = "<group>"; };
+		0F520C7622B57EDB0054BBFC /* gyro_vmu_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_version.h; sourceTree = "<group>"; };
+		0F520C7722B57EDB0054BBFC /* gyro_vmu_extra_bg_pvr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_extra_bg_pvr.h; sourceTree = "<group>"; };
+		0F520C7822B57EDB0054BBFC /* gyro_vmu_device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_device.h; sourceTree = "<group>"; };
+		0F520C7922B57EDB0054BBFC /* gyro_vmu_disassembler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_disassembler.h; sourceTree = "<group>"; };
+		0F520C7A22B57EDB0054BBFC /* gyro_vmu_gamepad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_gamepad.h; sourceTree = "<group>"; };
+		0F520C7B22B57EDB0054BBFC /* gyro_vmu_pso_img.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_pso_img.h; sourceTree = "<group>"; };
+		0F520C7C22B57EDB0054BBFC /* gyro_vmu_timers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_timers.h; sourceTree = "<group>"; };
+		0F520C7D22B57EDB0054BBFC /* gyro_vmu_lcd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_lcd.h; sourceTree = "<group>"; };
+		0F520C7E22B57EDB0054BBFC /* gyro_vmu_port1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_port1.h; sourceTree = "<group>"; };
+		0F520C7F22B57EDB0054BBFC /* gyro_vmu_bios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_bios.h; sourceTree = "<group>"; };
+		0F520C8022B57EDB0054BBFC /* gyro_vmu_display.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_display.h; sourceTree = "<group>"; };
+		0F520C8122B57EDB0054BBFC /* gyro_vmu_icondata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_icondata.h; sourceTree = "<group>"; };
+		0F520C8222B57EDB0054BBFC /* gyro_vmu_vms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_vms.h; sourceTree = "<group>"; };
+		0F520C8322B57EDB0054BBFC /* gyro_vmu_tcp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_vmu_tcp.h; sourceTree = "<group>"; };
+		0F520C8522B57EDB0054BBFC /* gyro_vmu_disassembler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_disassembler.c; sourceTree = "<group>"; };
+		0F520C8622B57EDB0054BBFC /* gyro_vmu_device.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_device.c; sourceTree = "<group>"; };
+		0F520C8722B57EDB0054BBFC /* gyro_vmu_extra_bg_pvr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_extra_bg_pvr.c; sourceTree = "<group>"; };
+		0F520C8822B57EDB0054BBFC /* gyro_vmu_bios.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_bios.c; sourceTree = "<group>"; };
+		0F520C8922B57EDB0054BBFC /* gyro_vmu_port1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_port1.c; sourceTree = "<group>"; };
+		0F520C8A22B57EDB0054BBFC /* gyro_vmu_lcd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_lcd.c; sourceTree = "<group>"; };
+		0F520C8B22B57EDB0054BBFC /* gyro_vmu_pso_img.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_pso_img.c; sourceTree = "<group>"; };
+		0F520C8C22B57EDB0054BBFC /* gyro_vmu_timers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_timers.c; sourceTree = "<group>"; };
+		0F520C8D22B57EDB0054BBFC /* gyro_vmu_gamepad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_gamepad.c; sourceTree = "<group>"; };
+		0F520C8E22B57EDB0054BBFC /* gyro_vmu_icondata.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_icondata.c; sourceTree = "<group>"; };
+		0F520C8F22B57EDB0054BBFC /* gyro_vmu_display.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_display.c; sourceTree = "<group>"; };
+		0F520C9022B57EDB0054BBFC /* gyro_vmu_tcp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_tcp.c; sourceTree = "<group>"; };
+		0F520C9122B57EDB0054BBFC /* gyro_vmu_vms.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_vms.c; sourceTree = "<group>"; };
+		0F520C9222B57EDB0054BBFC /* gyro_vmu_memory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_memory.c; sourceTree = "<group>"; };
+		0F520C9322B57EDB0054BBFC /* gyro_vmu_util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_util.c; sourceTree = "<group>"; };
+		0F520C9422B57EDB0054BBFC /* gyro_vmu_isr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_isr.c; sourceTree = "<group>"; };
+		0F520C9522B57EDB0054BBFC /* gyro_vmu_serial.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_serial.c; sourceTree = "<group>"; };
+		0F520C9622B57EDB0054BBFC /* gyro_vmu_port7.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_port7.c; sourceTree = "<group>"; };
+		0F520C9722B57EDB0054BBFC /* gyro_vmu_flash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_flash.c; sourceTree = "<group>"; };
+		0F520C9822B57EDB0054BBFC /* gyro_vmu_cpu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_cpu.c; sourceTree = "<group>"; };
+		0F520C9922B57EDB0054BBFC /* gyro_vmu_vmi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_vmi.c; sourceTree = "<group>"; };
+		0F520C9A22B57EDB0054BBFC /* gyro_vmu_buzzer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_buzzer.c; sourceTree = "<group>"; };
+		0F520C9B22B57EDB0054BBFC /* gyro_vmu_battery.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_battery.c; sourceTree = "<group>"; };
+		0F520C9C22B57EDB0054BBFC /* gyro_vmu_instr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_instr.c; sourceTree = "<group>"; };
+		0F520C9D22B57EDB0054BBFC /* gyro_vmu_version.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_version.c; sourceTree = "<group>"; };
+		0F520C9E22B57EDB0054BBFC /* gyro_vmu_maple.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_maple.c; sourceTree = "<group>"; };
+		0F520C9F22B57EDB0054BBFC /* gyro_vmu_osc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_vmu_osc.c; sourceTree = "<group>"; };
+		0F520CA022B57EDB0054BBFC /* .gitmodules */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitmodules; sourceTree = "<group>"; };
+		0F520FDA22B586480054BBFC /* gyro_system_api.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gyro_system_api.c; sourceTree = "<group>"; };
+		0F520FE322B586E20054BBFC /* gyro_system_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_system_api.h; sourceTree = "<group>"; };
+		0F520FE622B5878C0054BBFC /* gyro_visual_memory_api.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gyro_visual_memory_api.c; sourceTree = "<group>"; };
+		0F520FE922B587AD0054BBFC /* gyro_timer_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_timer_api.h; sourceTree = "<group>"; };
+		0F520FEA22B587DB0054BBFC /* gyro_timer_api.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_timer_api.c; sourceTree = "<group>"; };
+		0F520FEC22B589980054BBFC /* gyro_platform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gyro_platform.h; sourceTree = "<group>"; };
+		0F520FEE22B58AAD0054BBFC /* gyro_system_common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gyro_system_common.h; sourceTree = "<group>"; };
+		0F520FEF22B58ABD0054BBFC /* gyro_visual_memory_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_visual_memory_api.h; sourceTree = "<group>"; };
+		0F520FF022B58C660054BBFC /* gyro_net_api.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gyro_net_api.h; sourceTree = "<group>"; };
+		0F520FF122B58CAE0054BBFC /* gyro_file_api.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gyro_file_api.h; sourceTree = "<group>"; };
+		0F520FF222B58CD40054BBFC /* gyro_input_api.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gyro_input_api.h; sourceTree = "<group>"; };
+		0F520FF322B58D2C0054BBFC /* gyro_matrix_api.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gyro_matrix_api.h; sourceTree = "<group>"; };
+		0F520FF422B58D400054BBFC /* gyro_math_api.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gyro_math_api.h; sourceTree = "<group>"; };
+		0F520FF522B58F140054BBFC /* gyro_defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gyro_defines.h; sourceTree = "<group>"; };
+		0F520FF622B58F990054BBFC /* gyro_audio_api.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gyro_audio_api.h; sourceTree = "<group>"; };
+		0F520FF722B5967E0054BBFC /* gyro_math_common.inl */ = {isa = PBXFileReference; lastKnownFileType = text; path = gyro_math_common.inl; sourceTree = "<group>"; };
+		0F520FFA22B59B380054BBFC /* gyro_matrix_sse_x86.inl */ = {isa = PBXFileReference; lastKnownFileType = text; path = gyro_matrix_sse_x86.inl; sourceTree = "<group>"; };
+		0F520FFC22B59BC90054BBFC /* gyro_matrix_stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gyro_matrix_stack.h; sourceTree = "<group>"; };
+		0F520FFE22B59C4E0054BBFC /* gyro_video_ios.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gyro_video_ios.inl; sourceTree = "<group>"; };
+		0F520FFF22B59C4E0054BBFC /* gyro_input_ios.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gyro_input_ios.inl; sourceTree = "<group>"; };
+		0F52100322B59FAF0054BBFC /* gyro_matrix_stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gyro_matrix_stack.c; sourceTree = "<group>"; };
+		0F52100522B5A17C0054BBFC /* gyro_audio_al.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gyro_audio_al.c; sourceTree = "<group>"; };
+		0F52100722B689520054BBFC /* gyro_visual_memory_common.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gyro_visual_memory_common.c; sourceTree = "<group>"; };
+		0F52100922B68A4F0054BBFC /* gyro_net_ios.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gyro_net_ios.c; sourceTree = "<group>"; };
+		0F52100B22B68B650054BBFC /* gyro_file.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gyro_file.c; sourceTree = "<group>"; };
+		0F52100D22B68BBE0054BBFC /* turfs_strings.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = turfs_strings.c; sourceTree = "<group>"; };
+		0F52100E22B68BBE0054BBFC /* turfs_common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = turfs_common.c; sourceTree = "<group>"; };
+		0F52100F22B68BBE0054BBFC /* turfs_file_stdio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = turfs_file_stdio.c; sourceTree = "<group>"; };
+		0F52101322B68BCE0054BBFC /* turfs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = turfs.h; sourceTree = "<group>"; };
+		0F52101422B68BCE0054BBFC /* turfs_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = turfs_version.h; sourceTree = "<group>"; };
+		0F52101622B68C220054BBFC /* turfs_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = turfs_ios.mm; sourceTree = "<group>"; };
+		0F52101822B68C710054BBFC /* internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = internal.h; sourceTree = "<group>"; };
+		0F52101B22B68DC50054BBFC /* gyro_input_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = gyro_input_ios.mm; sourceTree = "<group>"; };
+		0F52101D22B68EEE0054BBFC /* gyro_timer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gyro_timer.c; sourceTree = "<group>"; };
+		0F52101F22B68F660054BBFC /* gyro_system.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gyro_system.c; sourceTree = "<group>"; };
+		0F52102222B68FB90054BBFC /* gyro_system_callbacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gyro_system_callbacks.h; sourceTree = "<group>"; };
+		0F52102322B68FEA0054BBFC /* gyro_debug_ios.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gyro_debug_ios.c; sourceTree = "<group>"; };
+		0F52102522B691C40054BBFC /* Evmu-watch-bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Evmu-watch-bridging-header.h"; sourceTree = "<group>"; };
+		0F52102722B69B180054BBFC /* minigame.VMS */ = {isa = PBXFileReference; explicitFileType = text; path = minigame.VMS; sourceTree = "<group>"; };
+		0F932C4722BA79EB00DA4149 /* evmu-watch WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "evmu-watch WatchKit App.entitlements"; sourceTree = "<group>"; };
+		0F932C4822BA79EF00DA4149 /* evmu-watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "evmu-watch.entitlements"; sourceTree = "<group>"; };
+		0F932C4D22BA7E0000DA4149 /* minigame.zip */ = {isa = PBXFileReference; explicitFileType = compiled; path = minigame.zip; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0F520C1E22B57D390054BBFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F520C3F22B57D3A0054BBFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F520C1822B57D390054BBFC = {
+			isa = PBXGroup;
+			children = (
+				0F39F3A622BA5F9E00782403 /* evmu-watch WatchKit Extension.entitlements */,
+				0F520C2322B57D390054BBFC /* evmu-watch */,
+				0F520C3722B57D390054BBFC /* evmu-watch WatchKit App */,
+				0F520C4622B57D3A0054BBFC /* evmu-watch-WatchKit-Extension */,
+				0F520C2222B57D390054BBFC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0F520C2222B57D390054BBFC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F520C2122B57D390054BBFC /* evmu-watch.app */,
+				0F520C3322B57D390054BBFC /* evmu-watch WatchKit App.app */,
+				0F520C4222B57D3A0054BBFC /* evmu-watch WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0F520C2322B57D390054BBFC /* evmu-watch */ = {
+			isa = PBXGroup;
+			children = (
+				0F932C4822BA79EF00DA4149 /* evmu-watch.entitlements */,
+				0F520C2422B57D390054BBFC /* AppDelegate.swift */,
+				0F520C2622B57D390054BBFC /* ViewController.swift */,
+				0F520C2822B57D390054BBFC /* Main.storyboard */,
+				0F520C2B22B57D390054BBFC /* Assets.xcassets */,
+				0F520C2D22B57D390054BBFC /* LaunchScreen.storyboard */,
+				0F520C3022B57D390054BBFC /* Info.plist */,
+			);
+			path = "evmu-watch";
+			sourceTree = "<group>";
+		};
+		0F520C3722B57D390054BBFC /* evmu-watch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				0F932C4722BA79EB00DA4149 /* evmu-watch WatchKit App.entitlements */,
+				0F520C3822B57D390054BBFC /* Interface.storyboard */,
+				0F520C3B22B57D3A0054BBFC /* Assets.xcassets */,
+				0F520C3D22B57D3A0054BBFC /* Info.plist */,
+			);
+			path = "evmu-watch WatchKit App";
+			sourceTree = "<group>";
+		};
+		0F520C4622B57D3A0054BBFC /* evmu-watch-WatchKit-Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0F52102622B69B180054BBFC /* files */,
+				0F520C5B22B57EDB0054BBFC /* evmu-core */,
+				0F520C4722B57D3A0054BBFC /* InterfaceController.swift */,
+				0F520C4922B57D3A0054BBFC /* ExtensionDelegate.swift */,
+				0F520C4B22B57D3B0054BBFC /* Assets.xcassets */,
+				0F520C4D22B57D3B0054BBFC /* Info.plist */,
+				0F52102522B691C40054BBFC /* Evmu-watch-bridging-header.h */,
+			);
+			path = "evmu-watch-WatchKit-Extension";
+			sourceTree = "<group>";
+		};
+		0F520C5B22B57EDB0054BBFC /* evmu-core */ = {
+			isa = PBXGroup;
+			children = (
+				0F520FD522B585D20054BBFC /* libGyro */,
+				0F520C6522B57EDB0054BBFC /* include */,
+				0F520C8422B57EDB0054BBFC /* source */,
+				0F520CA022B57EDB0054BBFC /* .gitmodules */,
+			);
+			path = "evmu-core";
+			sourceTree = SOURCE_ROOT;
+		};
+		0F520C6522B57EDB0054BBFC /* include */ = {
+			isa = PBXGroup;
+			children = (
+				0F520C6622B57EDB0054BBFC /* evmu-core */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		0F520C6622B57EDB0054BBFC /* evmu-core */ = {
+			isa = PBXGroup;
+			children = (
+				0F520C6722B57EDB0054BBFC /* gyro_vmu_memory.h */,
+				0F520C6822B57EDB0054BBFC /* gyro_vmu_adapter.h */,
+				0F520C6922B57EDB0054BBFC /* gyro_vmu_util.h */,
+				0F520C6A22B57EDB0054BBFC /* gyro_vmu_isr.h */,
+				0F520C6B22B57EDB0054BBFC /* gyro_vmu_serial.h */,
+				0F520C6C22B57EDB0054BBFC /* gyro_vmu_port7.h */,
+				0F520C6D22B57EDB0054BBFC /* gyro_vmu_buzzer.h */,
+				0F520C6E22B57EDB0054BBFC /* gyro_vmu_instr.h */,
+				0F520C6F22B57EDB0054BBFC /* gyro_vmu_battery.h */,
+				0F520C7022B57EDB0054BBFC /* gyro_vmu_vmi.h */,
+				0F520C7122B57EDB0054BBFC /* gyro_vmu_cpu.h */,
+				0F520C7222B57EDB0054BBFC /* gyro_vmu_flash.h */,
+				0F520C7322B57EDB0054BBFC /* gyro_vmu_osc.h */,
+				0F520C7422B57EDB0054BBFC /* gyro_vmu_sfr.h */,
+				0F520C7522B57EDB0054BBFC /* gyro_vmu_maple.h */,
+				0F520C7622B57EDB0054BBFC /* gyro_vmu_version.h */,
+				0F520C7722B57EDB0054BBFC /* gyro_vmu_extra_bg_pvr.h */,
+				0F520C7822B57EDB0054BBFC /* gyro_vmu_device.h */,
+				0F520C7922B57EDB0054BBFC /* gyro_vmu_disassembler.h */,
+				0F520C7A22B57EDB0054BBFC /* gyro_vmu_gamepad.h */,
+				0F520C7B22B57EDB0054BBFC /* gyro_vmu_pso_img.h */,
+				0F520C7C22B57EDB0054BBFC /* gyro_vmu_timers.h */,
+				0F520C7D22B57EDB0054BBFC /* gyro_vmu_lcd.h */,
+				0F520C7E22B57EDB0054BBFC /* gyro_vmu_port1.h */,
+				0F520C7F22B57EDB0054BBFC /* gyro_vmu_bios.h */,
+				0F520C8022B57EDB0054BBFC /* gyro_vmu_display.h */,
+				0F520C8122B57EDB0054BBFC /* gyro_vmu_icondata.h */,
+				0F520C8222B57EDB0054BBFC /* gyro_vmu_vms.h */,
+				0F520C8322B57EDB0054BBFC /* gyro_vmu_tcp.h */,
+			);
+			path = "evmu-core";
+			sourceTree = "<group>";
+		};
+		0F520C8422B57EDB0054BBFC /* source */ = {
+			isa = PBXGroup;
+			children = (
+				0F520C8522B57EDB0054BBFC /* gyro_vmu_disassembler.c */,
+				0F520C8622B57EDB0054BBFC /* gyro_vmu_device.c */,
+				0F520C8722B57EDB0054BBFC /* gyro_vmu_extra_bg_pvr.c */,
+				0F520C8822B57EDB0054BBFC /* gyro_vmu_bios.c */,
+				0F520C8922B57EDB0054BBFC /* gyro_vmu_port1.c */,
+				0F520C8A22B57EDB0054BBFC /* gyro_vmu_lcd.c */,
+				0F520C8B22B57EDB0054BBFC /* gyro_vmu_pso_img.c */,
+				0F520C8C22B57EDB0054BBFC /* gyro_vmu_timers.c */,
+				0F520C8D22B57EDB0054BBFC /* gyro_vmu_gamepad.c */,
+				0F520C8E22B57EDB0054BBFC /* gyro_vmu_icondata.c */,
+				0F520C8F22B57EDB0054BBFC /* gyro_vmu_display.c */,
+				0F520C9022B57EDB0054BBFC /* gyro_vmu_tcp.c */,
+				0F520C9122B57EDB0054BBFC /* gyro_vmu_vms.c */,
+				0F520C9222B57EDB0054BBFC /* gyro_vmu_memory.c */,
+				0F520C9322B57EDB0054BBFC /* gyro_vmu_util.c */,
+				0F520C9422B57EDB0054BBFC /* gyro_vmu_isr.c */,
+				0F520C9522B57EDB0054BBFC /* gyro_vmu_serial.c */,
+				0F520C9622B57EDB0054BBFC /* gyro_vmu_port7.c */,
+				0F520C9722B57EDB0054BBFC /* gyro_vmu_flash.c */,
+				0F520C9822B57EDB0054BBFC /* gyro_vmu_cpu.c */,
+				0F520C9922B57EDB0054BBFC /* gyro_vmu_vmi.c */,
+				0F520C9A22B57EDB0054BBFC /* gyro_vmu_buzzer.c */,
+				0F520C9B22B57EDB0054BBFC /* gyro_vmu_battery.c */,
+				0F520C9C22B57EDB0054BBFC /* gyro_vmu_instr.c */,
+				0F520C9D22B57EDB0054BBFC /* gyro_vmu_version.c */,
+				0F520C9E22B57EDB0054BBFC /* gyro_vmu_maple.c */,
+				0F520C9F22B57EDB0054BBFC /* gyro_vmu_osc.c */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		0F520FD522B585D20054BBFC /* libGyro */ = {
+			isa = PBXGroup;
+			children = (
+				0F52101522B68C220054BBFC /* ios */,
+				0F52100222B59FAF0054BBFC /* common */,
+				0F520FE122B586E20054BBFC /* api */,
+				0F520FDA22B586480054BBFC /* gyro_system_api.c */,
+				0F520FEA22B587DB0054BBFC /* gyro_timer_api.c */,
+				0F520FE622B5878C0054BBFC /* gyro_visual_memory_api.c */,
+				0F52100522B5A17C0054BBFC /* gyro_audio_al.c */,
+				0F52100922B68A4F0054BBFC /* gyro_net_ios.c */,
+			);
+			path = libGyro;
+			sourceTree = "<group>";
+		};
+		0F520FE122B586E20054BBFC /* api */ = {
+			isa = PBXGroup;
+			children = (
+				0F520FE222B586E20054BBFC /* libGyro */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		0F520FE222B586E20054BBFC /* libGyro */ = {
+			isa = PBXGroup;
+			children = (
+				0F520FFD22B59C4E0054BBFC /* ios */,
+				0F520FF922B59B250054BBFC /* x86 */,
+				0F520FED22B58A950054BBFC /* common */,
+				0F520FE922B587AD0054BBFC /* gyro_timer_api.h */,
+				0F520FEF22B58ABD0054BBFC /* gyro_visual_memory_api.h */,
+				0F520FE322B586E20054BBFC /* gyro_system_api.h */,
+				0F520FEC22B589980054BBFC /* gyro_platform.h */,
+				0F520FF022B58C660054BBFC /* gyro_net_api.h */,
+				0F520FF122B58CAE0054BBFC /* gyro_file_api.h */,
+				0F520FF222B58CD40054BBFC /* gyro_input_api.h */,
+				0F520FF322B58D2C0054BBFC /* gyro_matrix_api.h */,
+				0F520FF422B58D400054BBFC /* gyro_math_api.h */,
+				0F520FF522B58F140054BBFC /* gyro_defines.h */,
+				0F520FF622B58F990054BBFC /* gyro_audio_api.h */,
+			);
+			path = libGyro;
+			sourceTree = "<group>";
+		};
+		0F520FED22B58A950054BBFC /* common */ = {
+			isa = PBXGroup;
+			children = (
+				0F52101422B68BCE0054BBFC /* turfs_version.h */,
+				0F52101322B68BCE0054BBFC /* turfs.h */,
+				0F520FEE22B58AAD0054BBFC /* gyro_system_common.h */,
+				0F520FF722B5967E0054BBFC /* gyro_math_common.inl */,
+				0F520FFC22B59BC90054BBFC /* gyro_matrix_stack.h */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		0F520FF922B59B250054BBFC /* x86 */ = {
+			isa = PBXGroup;
+			children = (
+				0F39F3A222BA596900782403 /* gyro_file_x86.inl */,
+				0F520FFA22B59B380054BBFC /* gyro_matrix_sse_x86.inl */,
+			);
+			path = x86;
+			sourceTree = "<group>";
+		};
+		0F520FFD22B59C4E0054BBFC /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				0F520FFE22B59C4E0054BBFC /* gyro_video_ios.inl */,
+				0F520FFF22B59C4E0054BBFC /* gyro_input_ios.inl */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		0F52100222B59FAF0054BBFC /* common */ = {
+			isa = PBXGroup;
+			children = (
+				0F52102222B68FB90054BBFC /* gyro_system_callbacks.h */,
+				0F52101822B68C710054BBFC /* internal.h */,
+				0F52100E22B68BBE0054BBFC /* turfs_common.c */,
+				0F52100F22B68BBE0054BBFC /* turfs_file_stdio.c */,
+				0F52100D22B68BBE0054BBFC /* turfs_strings.c */,
+				0F52100322B59FAF0054BBFC /* gyro_matrix_stack.c */,
+				0F52100722B689520054BBFC /* gyro_visual_memory_common.c */,
+				0F52100B22B68B650054BBFC /* gyro_file.c */,
+				0F52101D22B68EEE0054BBFC /* gyro_timer.c */,
+				0F52101F22B68F660054BBFC /* gyro_system.c */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		0F52101522B68C220054BBFC /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				0F52101B22B68DC50054BBFC /* gyro_input_ios.mm */,
+				0F52101622B68C220054BBFC /* turfs_ios.mm */,
+				0F52102322B68FEA0054BBFC /* gyro_debug_ios.c */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		0F52102622B69B180054BBFC /* files */ = {
+			isa = PBXGroup;
+			children = (
+				0F932C4D22BA7E0000DA4149 /* minigame.zip */,
+				0F39F3A422BA5A8900782403 /* minigame.VMI */,
+				0F52102722B69B180054BBFC /* minigame.VMS */,
+			);
+			path = files;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0F520C2022B57D390054BBFC /* evmu-watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F520C5822B57D3B0054BBFC /* Build configuration list for PBXNativeTarget "evmu-watch" */;
+			buildPhases = (
+				0F520C1D22B57D390054BBFC /* Sources */,
+				0F520C1E22B57D390054BBFC /* Frameworks */,
+				0F520C1F22B57D390054BBFC /* Resources */,
+				0F520C5722B57D3B0054BBFC /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F520C3622B57D390054BBFC /* PBXTargetDependency */,
+			);
+			name = "evmu-watch";
+			productName = "evmu-watch";
+			productReference = 0F520C2122B57D390054BBFC /* evmu-watch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0F520C3222B57D390054BBFC /* evmu-watch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F520C5422B57D3B0054BBFC /* Build configuration list for PBXNativeTarget "evmu-watch WatchKit App" */;
+			buildPhases = (
+				0F520C3122B57D390054BBFC /* Resources */,
+				0F520C5322B57D3B0054BBFC /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F520C4522B57D3A0054BBFC /* PBXTargetDependency */,
+			);
+			name = "evmu-watch WatchKit App";
+			productName = "evmu-watch WatchKit App";
+			productReference = 0F520C3322B57D390054BBFC /* evmu-watch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		0F520C4122B57D3A0054BBFC /* evmu-watch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F520C5022B57D3B0054BBFC /* Build configuration list for PBXNativeTarget "evmu-watch WatchKit Extension" */;
+			buildPhases = (
+				0F520C3E22B57D3A0054BBFC /* Sources */,
+				0F520C3F22B57D3A0054BBFC /* Frameworks */,
+				0F520C4022B57D3A0054BBFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "evmu-watch WatchKit Extension";
+			productName = "evmu-watch WatchKit Extension";
+			productReference = 0F520C4222B57D3A0054BBFC /* evmu-watch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0F520C1922B57D390054BBFC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = es;
+				TargetAttributes = {
+					0F520C2022B57D390054BBFC = {
+						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					0F520C3222B57D390054BBFC = {
+						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					0F520C4122B57D3A0054BBFC = {
+						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 0F520C1C22B57D390054BBFC /* Build configuration list for PBXProject "evmu-watch" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0F520C1822B57D390054BBFC;
+			productRefGroup = 0F520C2222B57D390054BBFC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0F520C2022B57D390054BBFC /* evmu-watch */,
+				0F520C3222B57D390054BBFC /* evmu-watch WatchKit App */,
+				0F520C4122B57D3A0054BBFC /* evmu-watch WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F520C1F22B57D390054BBFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F520C2F22B57D390054BBFC /* LaunchScreen.storyboard in Resources */,
+				0F520C2C22B57D390054BBFC /* Assets.xcassets in Resources */,
+				0F520C2A22B57D390054BBFC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F520C3122B57D390054BBFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F520C3C22B57D3A0054BBFC /* Assets.xcassets in Resources */,
+				0F520C3A22B57D390054BBFC /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F520C4022B57D3A0054BBFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F932C4F22BA7E1800DA4149 /* minigame.zip in Resources */,
+				0F520FFB22B59B380054BBFC /* gyro_matrix_sse_x86.inl in Resources */,
+				0F520CCD22B57EDB0054BBFC /* .gitmodules in Resources */,
+				0F39F3A522BA5A8900782403 /* minigame.VMI in Resources */,
+				0F52100022B59C4E0054BBFC /* gyro_video_ios.inl in Resources */,
+				0F52100122B59C4E0054BBFC /* gyro_input_ios.inl in Resources */,
+				0F520FF822B5967E0054BBFC /* gyro_math_common.inl in Resources */,
+				0F52102822B69B180054BBFC /* minigame.VMS in Resources */,
+				0F520C4C22B57D3B0054BBFC /* Assets.xcassets in Resources */,
+				0F39F3A322BA596900782403 /* gyro_file_x86.inl in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0F520C1D22B57D390054BBFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F520C2722B57D390054BBFC /* ViewController.swift in Sources */,
+				0F520C2522B57D390054BBFC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F520C3E22B57D3A0054BBFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F520CC922B57EDB0054BBFC /* gyro_vmu_instr.c in Sources */,
+				0F52101E22B68EEE0054BBFC /* gyro_timer.c in Sources */,
+				0F52101122B68BBE0054BBFC /* turfs_common.c in Sources */,
+				0F52101022B68BBE0054BBFC /* turfs_strings.c in Sources */,
+				0F520C4A22B57D3A0054BBFC /* ExtensionDelegate.swift in Sources */,
+				0F520CC222B57EDB0054BBFC /* gyro_vmu_serial.c in Sources */,
+				0F520CBF22B57EDB0054BBFC /* gyro_vmu_memory.c in Sources */,
+				0F520CC022B57EDB0054BBFC /* gyro_vmu_util.c in Sources */,
+				0F520CCC22B57EDB0054BBFC /* gyro_vmu_osc.c in Sources */,
+				0F520CC322B57EDB0054BBFC /* gyro_vmu_port7.c in Sources */,
+				0F520CB722B57EDB0054BBFC /* gyro_vmu_lcd.c in Sources */,
+				0F52100622B5A17C0054BBFC /* gyro_audio_al.c in Sources */,
+				0F520CB322B57EDB0054BBFC /* gyro_vmu_device.c in Sources */,
+				0F520CCA22B57EDB0054BBFC /* gyro_vmu_version.c in Sources */,
+				0F52100422B59FAF0054BBFC /* gyro_matrix_stack.c in Sources */,
+				0F520CB922B57EDB0054BBFC /* gyro_vmu_timers.c in Sources */,
+				0F520CC122B57EDB0054BBFC /* gyro_vmu_isr.c in Sources */,
+				0F520CB522B57EDB0054BBFC /* gyro_vmu_bios.c in Sources */,
+				0F520FE722B5878C0054BBFC /* gyro_visual_memory_api.c in Sources */,
+				0F520CBA22B57EDB0054BBFC /* gyro_vmu_gamepad.c in Sources */,
+				0F520CC622B57EDB0054BBFC /* gyro_vmu_vmi.c in Sources */,
+				0F520CBB22B57EDB0054BBFC /* gyro_vmu_icondata.c in Sources */,
+				0F520CB622B57EDB0054BBFC /* gyro_vmu_port1.c in Sources */,
+				0F520CB422B57EDB0054BBFC /* gyro_vmu_extra_bg_pvr.c in Sources */,
+				0F52102422B68FEA0054BBFC /* gyro_debug_ios.c in Sources */,
+				0F520CC822B57EDB0054BBFC /* gyro_vmu_battery.c in Sources */,
+				0F520CBE22B57EDB0054BBFC /* gyro_vmu_vms.c in Sources */,
+				0F520CB822B57EDB0054BBFC /* gyro_vmu_pso_img.c in Sources */,
+				0F52100A22B68A4F0054BBFC /* gyro_net_ios.c in Sources */,
+				0F520CBC22B57EDB0054BBFC /* gyro_vmu_display.c in Sources */,
+				0F520CCB22B57EDB0054BBFC /* gyro_vmu_maple.c in Sources */,
+				0F52100C22B68B650054BBFC /* gyro_file.c in Sources */,
+				0F52101722B68C220054BBFC /* turfs_ios.mm in Sources */,
+				0F520CBD22B57EDB0054BBFC /* gyro_vmu_tcp.c in Sources */,
+				0F520CC722B57EDB0054BBFC /* gyro_vmu_buzzer.c in Sources */,
+				0F52101222B68BBE0054BBFC /* turfs_file_stdio.c in Sources */,
+				0F52102022B68F660054BBFC /* gyro_system.c in Sources */,
+				0F520CB222B57EDB0054BBFC /* gyro_vmu_disassembler.c in Sources */,
+				0F520FEB22B587DB0054BBFC /* gyro_timer_api.c in Sources */,
+				0F52100822B689520054BBFC /* gyro_visual_memory_common.c in Sources */,
+				0F52101C22B68DC50054BBFC /* gyro_input_ios.mm in Sources */,
+				0F520CC422B57EDB0054BBFC /* gyro_vmu_flash.c in Sources */,
+				0F520CC522B57EDB0054BBFC /* gyro_vmu_cpu.c in Sources */,
+				0F520C4822B57D3A0054BBFC /* InterfaceController.swift in Sources */,
+				0F520FDB22B586480054BBFC /* gyro_system_api.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0F520C3622B57D390054BBFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F520C3222B57D390054BBFC /* evmu-watch WatchKit App */;
+			targetProxy = 0F520C3522B57D390054BBFC /* PBXContainerItemProxy */;
+		};
+		0F520C4522B57D3A0054BBFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F520C4122B57D3A0054BBFC /* evmu-watch WatchKit Extension */;
+			targetProxy = 0F520C4422B57D3A0054BBFC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0F520C2822B57D390054BBFC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F520C2922B57D390054BBFC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0F520C2D22B57D390054BBFC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F520C2E22B57D390054BBFC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0F520C3822B57D390054BBFC /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F520C3922B57D390054BBFC /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0F520C4E22B57D3B0054BBFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"GYRO_PLATFORM=8",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0F520C4F22B57D3B0054BBFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0F520C5122B57D3B0054BBFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D7Z468F72Q;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"evmu-core/include/evmu-core/**",
+					"evmu-core/libGyro/**",
+				);
+				INFOPLIST_FILE = "evmu-watch-WatchKit-Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_CFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "es.evmu-watch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "evmu-watch-WatchKit-Extension/Evmu-watch-bridging-header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+			};
+			name = Debug;
+		};
+		0F520C5222B57D3B0054BBFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D7Z468F72Q;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				HEADER_SEARCH_PATHS = (
+					"evmu-core/include/evmu-core/**",
+					"evmu-core/libGyro/**",
+				);
+				INFOPLIST_FILE = "evmu-watch-WatchKit-Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_CFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "es.evmu-watch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "evmu-watch-WatchKit-Extension/Evmu-watch-bridging-header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+			};
+			name = Release;
+		};
+		0F520C5522B57D3B0054BBFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D7Z468F72Q;
+				IBSC_MODULE = evmu_watch_WatchKit_Extension;
+				INFOPLIST_FILE = "evmu-watch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "es.evmu-watch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+			};
+			name = Debug;
+		};
+		0F520C5622B57D3B0054BBFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D7Z468F72Q;
+				IBSC_MODULE = evmu_watch_WatchKit_Extension;
+				INFOPLIST_FILE = "evmu-watch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "es.evmu-watch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+			};
+			name = Release;
+		};
+		0F520C5922B57D3B0054BBFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D7Z468F72Q;
+				INFOPLIST_FILE = "evmu-watch/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "es.evmu-watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0F520C5A22B57D3B0054BBFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D7Z468F72Q;
+				INFOPLIST_FILE = "evmu-watch/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "es.evmu-watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F520C1C22B57D390054BBFC /* Build configuration list for PBXProject "evmu-watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F520C4E22B57D3B0054BBFC /* Debug */,
+				0F520C4F22B57D3B0054BBFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F520C5022B57D3B0054BBFC /* Build configuration list for PBXNativeTarget "evmu-watch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F520C5122B57D3B0054BBFC /* Debug */,
+				0F520C5222B57D3B0054BBFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F520C5422B57D3B0054BBFC /* Build configuration list for PBXNativeTarget "evmu-watch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F520C5522B57D3B0054BBFC /* Debug */,
+				0F520C5622B57D3B0054BBFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F520C5822B57D3B0054BBFC /* Build configuration list for PBXNativeTarget "evmu-watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F520C5922B57D3B0054BBFC /* Debug */,
+				0F520C5A22B57D3B0054BBFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0F520C1922B57D390054BBFC /* Project object */;
+}
