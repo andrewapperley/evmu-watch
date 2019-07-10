@@ -12,16 +12,90 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="evmu_watch_WatchKit_App" customModuleProvider="target">
+                <controller fullScreen="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="evmu_watch_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <sceneKitScene width="136" height="90.599999999999994" alignment="center" verticalAlignment="center" id="vxu-ke-vy1"/>
+                        <sceneKitScene width="136" height="90.599999999999994" alignment="center" loops="YES" playing="YES" id="vxu-ke-vy1">
+                            <gestureRecognizers>
+                                <panGestureRecognizer id="V3B-M2-FUb">
+                                    <connections>
+                                        <action selector="onSleepAndModeTapped:" destination="AgC-eL-Hgc" id="T31-5C-kBb"/>
+                                    </connections>
+                                </panGestureRecognizer>
+                            </gestureRecognizers>
+                        </sceneKitScene>
+                        <group width="1" height="0.40000000000000002" alignment="center" verticalAlignment="bottom" layout="overlap" id="yVK-1E-eWM">
+                            <items>
+                                <group width="0.69999999999999996" height="1" alignment="left" layout="overlap" id="bjT-NQ-jVK">
+                                    <items>
+                                        <imageView width="30" height="30" alignment="center" image="UButton" id="l6d-iq-c4A">
+                                            <gestureRecognizers>
+                                                <longPressGestureRecognizer minimumPressDuration="0.01" id="HsB-Uk-a63">
+                                                    <connections>
+                                                        <action selector="onUpTapped:" destination="AgC-eL-Hgc" id="iyH-I5-lf9"/>
+                                                    </connections>
+                                                </longPressGestureRecognizer>
+                                            </gestureRecognizers>
+                                        </imageView>
+                                        <imageView width="30" height="30" alignment="left" verticalAlignment="center" image="LButton" id="bhm-4N-vjl">
+                                            <gestureRecognizers>
+                                                <longPressGestureRecognizer minimumPressDuration="0.01" id="y7Q-k0-Gn5">
+                                                    <connections>
+                                                        <action selector="onLeftTapped:" destination="AgC-eL-Hgc" id="27H-md-gIC"/>
+                                                    </connections>
+                                                </longPressGestureRecognizer>
+                                            </gestureRecognizers>
+                                        </imageView>
+                                        <imageView width="30" height="30" alignment="center" verticalAlignment="bottom" image="DButton" id="qJN-7c-6LV">
+                                            <gestureRecognizers>
+                                                <longPressGestureRecognizer minimumPressDuration="0.01" id="TNd-B2-WHK">
+                                                    <connections>
+                                                        <action selector="onDownTapped:" destination="AgC-eL-Hgc" id="Hov-8c-TX4"/>
+                                                    </connections>
+                                                </longPressGestureRecognizer>
+                                            </gestureRecognizers>
+                                        </imageView>
+                                        <imageView width="30" height="30" alignment="right" verticalAlignment="center" image="RButton" id="vNj-hL-y58">
+                                            <gestureRecognizers>
+                                                <longPressGestureRecognizer minimumPressDuration="0.01" id="xO3-FI-7AY">
+                                                    <connections>
+                                                        <action selector="onRightTapped:" destination="AgC-eL-Hgc" id="edM-Zo-48G"/>
+                                                    </connections>
+                                                </longPressGestureRecognizer>
+                                            </gestureRecognizers>
+                                        </imageView>
+                                    </items>
+                                </group>
+                                <group width="0.29999999999999999" height="1" alignment="right" layout="overlap" id="IeL-r7-Vi2">
+                                    <items>
+                                        <imageView width="30" height="30" alignment="center" image="AButton" contentMode="scaleAspectFit" id="61U-7M-w5r">
+                                            <gestureRecognizers>
+                                                <longPressGestureRecognizer minimumPressDuration="0.01" id="N8h-xc-1cQ">
+                                                    <connections>
+                                                        <action selector="onATapped:" destination="AgC-eL-Hgc" id="kkA-Yw-FzZ"/>
+                                                    </connections>
+                                                </longPressGestureRecognizer>
+                                            </gestureRecognizers>
+                                        </imageView>
+                                        <imageView width="30" height="30" alignment="center" verticalAlignment="bottom" image="BButton" contentMode="scaleAspectFit" id="lVs-Fc-5Gr">
+                                            <gestureRecognizers>
+                                                <longPressGestureRecognizer minimumPressDuration="0.01" id="sLK-Tf-T1i">
+                                                    <connections>
+                                                        <action selector="onBTapped:" destination="AgC-eL-Hgc" id="cI9-m1-nXr"/>
+                                                    </connections>
+                                                </longPressGestureRecognizer>
+                                            </gestureRecognizers>
+                                        </imageView>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
                     </items>
                     <connections>
                         <outlet property="screen" destination="vxu-ke-vy1" id="s9W-CJ-0zH"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="34" y="30.5"/>
+            <point key="canvasLocation" x="34" y="29"/>
         </scene>
     </scenes>
 </document>
