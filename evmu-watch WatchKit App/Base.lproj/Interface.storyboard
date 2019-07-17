@@ -27,64 +27,40 @@
                             <items>
                                 <group width="0.69999999999999996" height="1" alignment="left" layout="overlap" id="bjT-NQ-jVK">
                                     <items>
-                                        <imageView width="30" height="30" alignment="center" image="UButton" id="l6d-iq-c4A">
-                                            <gestureRecognizers>
-                                                <longPressGestureRecognizer minimumPressDuration="0.01" id="HsB-Uk-a63">
-                                                    <connections>
-                                                        <action selector="onUpTapped:" destination="AgC-eL-Hgc" id="iyH-I5-lf9"/>
-                                                    </connections>
-                                                </longPressGestureRecognizer>
-                                            </gestureRecognizers>
-                                        </imageView>
-                                        <imageView width="30" height="30" alignment="left" verticalAlignment="center" image="LButton" id="bhm-4N-vjl">
-                                            <gestureRecognizers>
-                                                <longPressGestureRecognizer minimumPressDuration="0.01" id="y7Q-k0-Gn5">
-                                                    <connections>
-                                                        <action selector="onLeftTapped:" destination="AgC-eL-Hgc" id="27H-md-gIC"/>
-                                                    </connections>
-                                                </longPressGestureRecognizer>
-                                            </gestureRecognizers>
-                                        </imageView>
-                                        <imageView width="30" height="30" alignment="center" verticalAlignment="bottom" image="DButton" id="qJN-7c-6LV">
-                                            <gestureRecognizers>
-                                                <longPressGestureRecognizer minimumPressDuration="0.01" id="TNd-B2-WHK">
-                                                    <connections>
-                                                        <action selector="onDownTapped:" destination="AgC-eL-Hgc" id="Hov-8c-TX4"/>
-                                                    </connections>
-                                                </longPressGestureRecognizer>
-                                            </gestureRecognizers>
-                                        </imageView>
-                                        <imageView width="30" height="30" alignment="right" verticalAlignment="center" image="RButton" id="vNj-hL-y58">
-                                            <gestureRecognizers>
-                                                <longPressGestureRecognizer minimumPressDuration="0.01" id="xO3-FI-7AY">
-                                                    <connections>
-                                                        <action selector="onRightTapped:" destination="AgC-eL-Hgc" id="edM-Zo-48G"/>
-                                                    </connections>
-                                                </longPressGestureRecognizer>
-                                            </gestureRecognizers>
-                                        </imageView>
+                                        <button width="30" height="30" alignment="center" backgroundImage="UButton" id="Ve3-fr-FkH">
+                                            <connections>
+                                                <action selector="onUpTapped" destination="AgC-eL-Hgc" id="x8t-U1-oNm"/>
+                                            </connections>
+                                        </button>
+                                        <button width="30" height="30" alignment="left" verticalAlignment="center" backgroundImage="LButton" id="Ew4-Ig-nfO">
+                                            <connections>
+                                                <action selector="onLeftTapped" destination="AgC-eL-Hgc" id="lXV-Tm-qBH"/>
+                                            </connections>
+                                        </button>
+                                        <button width="30" height="30" alignment="center" verticalAlignment="bottom" backgroundImage="DButton" id="5O1-Ea-g2r">
+                                            <connections>
+                                                <action selector="onDownTapped" destination="AgC-eL-Hgc" id="1JK-KZ-aoS"/>
+                                            </connections>
+                                        </button>
+                                        <button width="30" height="30" alignment="right" verticalAlignment="center" backgroundImage="RButton" id="RJg-ne-HsW">
+                                            <connections>
+                                                <action selector="onRightTapped" destination="AgC-eL-Hgc" id="9YC-6c-mdv"/>
+                                            </connections>
+                                        </button>
                                     </items>
                                 </group>
                                 <group width="0.29999999999999999" height="1" alignment="right" layout="overlap" id="IeL-r7-Vi2">
                                     <items>
-                                        <imageView width="30" height="30" alignment="center" image="AButton" contentMode="scaleAspectFit" id="61U-7M-w5r">
-                                            <gestureRecognizers>
-                                                <longPressGestureRecognizer minimumPressDuration="0.01" id="N8h-xc-1cQ">
-                                                    <connections>
-                                                        <action selector="onATapped:" destination="AgC-eL-Hgc" id="kkA-Yw-FzZ"/>
-                                                    </connections>
-                                                </longPressGestureRecognizer>
-                                            </gestureRecognizers>
-                                        </imageView>
-                                        <imageView width="30" height="30" alignment="center" verticalAlignment="bottom" image="BButton" contentMode="scaleAspectFit" id="lVs-Fc-5Gr">
-                                            <gestureRecognizers>
-                                                <longPressGestureRecognizer minimumPressDuration="0.01" id="sLK-Tf-T1i">
-                                                    <connections>
-                                                        <action selector="onBTapped:" destination="AgC-eL-Hgc" id="cI9-m1-nXr"/>
-                                                    </connections>
-                                                </longPressGestureRecognizer>
-                                            </gestureRecognizers>
-                                        </imageView>
+                                        <button width="30" height="30" alignment="center" backgroundImage="AButton" id="oLv-Ov-qnq">
+                                            <connections>
+                                                <action selector="onATapped" destination="AgC-eL-Hgc" id="9Xm-nq-LaY"/>
+                                            </connections>
+                                        </button>
+                                        <button width="30" height="30" alignment="center" verticalAlignment="bottom" backgroundImage="BButton" id="X7b-gD-Rqp">
+                                            <connections>
+                                                <action selector="onBTapped" destination="AgC-eL-Hgc" id="Iom-BH-DqT"/>
+                                            </connections>
+                                        </button>
                                     </items>
                                 </group>
                             </items>
