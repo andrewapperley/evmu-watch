@@ -11,6 +11,36 @@ import Foundation
 import SpriteKit
 import UIKit
 
+struct InputMap {
+	enum Inputs {
+		case up
+		case down
+		case left
+		case right
+		
+		case a
+		case b
+		
+		case sleep
+		case mode
+	}
+	
+	var up: [Int32] = []
+	var down: [Int32] = []
+	var left: [Int32] = []
+	var right: [Int32] = []
+	
+	var a: [Int32] = []
+	var b: [Int32] = []
+	
+	var sleep: [Int32] = []
+	var mode: [Int32] = []
+}
+
+protocol EmulatorDelegate: class {
+	func didSelectRom(path: String)
+}
+
 protocol InputHandling {
 	mutating func updateInputMap(input: InputMap.Inputs, finished: Bool)
 }

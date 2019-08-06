@@ -19,7 +19,6 @@
 		0F520C3A22B57D390054BBFC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F520C3822B57D390054BBFC /* Interface.storyboard */; };
 		0F520C3C22B57D3A0054BBFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F520C3B22B57D3A0054BBFC /* Assets.xcassets */; };
 		0F520C4322B57D3A0054BBFC /* evmu-watch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0F520C4222B57D3A0054BBFC /* evmu-watch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		0F520C4822B57D3A0054BBFC /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C4722B57D3A0054BBFC /* InterfaceController.swift */; };
 		0F520C4A22B57D3A0054BBFC /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C4922B57D3A0054BBFC /* ExtensionDelegate.swift */; };
 		0F520C4C22B57D3B0054BBFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F520C4B22B57D3B0054BBFC /* Assets.xcassets */; };
 		0F520CB222B57EDB0054BBFC /* gyro_vmu_disassembler.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C8522B57EDB0054BBFC /* gyro_vmu_disassembler.c */; };
@@ -136,7 +135,6 @@
 		0F520C3B22B57D3A0054BBFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F520C3D22B57D3A0054BBFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F520C4222B57D3A0054BBFC /* evmu-watch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "evmu-watch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F520C4722B57D3A0054BBFC /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		0F520C4922B57D3A0054BBFC /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		0F520C4B22B57D3B0054BBFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F520C4D22B57D3B0054BBFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -311,7 +309,6 @@
 			children = (
 				0F52102622B69B180054BBFC /* files */,
 				0F520C5B22B57EDB0054BBFC /* evmu-core */,
-				0F520C4722B57D3A0054BBFC /* InterfaceController.swift */,
 				0F520C4922B57D3A0054BBFC /* ExtensionDelegate.swift */,
 				0F520C4B22B57D3B0054BBFC /* Assets.xcassets */,
 				0F520C4D22B57D3B0054BBFC /* Info.plist */,
@@ -734,7 +731,6 @@
 				0F52101C22B68DC50054BBFC /* gyro_input_ios.mm in Sources */,
 				0F520CC422B57EDB0054BBFC /* gyro_vmu_flash.c in Sources */,
 				0F520CC522B57EDB0054BBFC /* gyro_vmu_cpu.c in Sources */,
-				0F520C4822B57D3A0054BBFC /* InterfaceController.swift in Sources */,
 				0F520FDB22B586480054BBFC /* gyro_system_api.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
