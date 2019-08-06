@@ -8,6 +8,10 @@
 
 import WatchKit
 
+class SettingsTableRowController: NSObject {
+	
+}
+
 class EmulatorSettingsController: WKInterfaceController {
-	@IBOutlet weak var settingsList: WKInterfacePicker!
+	@IBOutlet weak var settingsList: WKInterfaceTable!
 }

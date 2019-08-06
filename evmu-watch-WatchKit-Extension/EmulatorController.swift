@@ -87,6 +87,9 @@ extension Emulator: InputHandling {
 		@unknown default:
 			print("Unknown input was activated")
 		}
+		if finished {
+			WKInterfaceDevice.current().play(.click)
+		}
 	}
 }
 
@@ -123,57 +126,45 @@ class EmulatorController: WKInterfaceController {
 	}
 	
 	@IBAction func onUpTapped() {
-		emulator.inputMap.up.append(1)
-		emulator.inputMap.up.append(0)
-		WKInterfaceDevice.current().play(.click)
+		emulator.updateInputMap(input: .up)
 	}
 	
 	@IBAction func onDownTapped() {
-		emulator.inputMap.down.append(1)
-		emulator.inputMap.down.append(0)
-		WKInterfaceDevice.current().play(.click)
+		emulator.updateInputMap(input: .down)
 	}
 	
 	@IBAction func onLeftTapped() {
-		emulator.inputMap.left.append(1)
-		emulator.inputMap.left.append(0)
-		WKInterfaceDevice.current().play(.click)
+		emulator.updateInputMap(input: .left)
 	}
 	
 	@IBAction func onRightTapped() {
-		emulator.inputMap.right.append(1)
-		emulator.inputMap.right.append(0)
-		WKInterfaceDevice.current().play(.click)
+		emulator.updateInputMap(input: .right)
 	}
 	
 	@IBAction func onATapped() {
-		emulator.inputMap.a.append(1)
-		emulator.inputMap.a.append(0)
-		WKInterfaceDevice.current().play(.click)
+		emulator.updateInputMap(input: .a)
 	}
 	
 	@IBAction func onBTapped() {
-		emulator.inputMap.b.append(1)
-		emulator.inputMap.b.append(0)
-		WKInterfaceDevice.current().play(.click)
+		emulator.updateInputMap(input: .b)
 	}
 	
 	@IBAction func onSleepAndModeTapped(_ sender: WKPanGestureRecognizer) {
 		let x = sender.velocityInObject().x
 		switch sender.state {
-			//			Left is Mode
-		//			Right is Sleep
+//		Left is Mode
+//		Right is Sleep
 		case .began:
 			if x > 0 {
-				emulator.inputMap.sleep.append(1)
+				emulator.updateInputMap(input: .sleep, finished: false)
 			} else {
-				emulator.inputMap.mode.append(1)
+				emulator.updateInputMap(input: .mode, finished: false)
 			}
 		case .ended, .cancelled, .failed:
 			if x > 0 {
-				emulator.inputMap.sleep.append(0)
+				emulator.updateInputMap(input: .sleep)
 			} else {
-				emulator.inputMap.mode.append(0)
+				emulator.updateInputMap(input: .mode)
 			}
 		default:
 			break
@@ -198,16 +189,16 @@ extension EmulatorController: SCNSceneRendererDelegate {
 		processInputQueue()
 		
 		if emulator.updateTime == 0.0 { emulator.updateTime = time }
-		let deltaTime = time - emulator.updateTime
+		let deltaTime: Float = Float(min(time - emulator.updateTime, 1.0))
 		emulator.updateTime = time
 		
-		gyVmuDeviceUpdate(emulator.device, Float(deltaTime))
+		gyVmuDeviceUpdate(emulator.device, deltaTime)
 		UIGraphicsBeginImageContextWithOptions(CGSize(width: CGFloat(VMU_DISP_PIXEL_WIDTH), height: CGFloat(VMU_DISP_PIXEL_HEIGHT)), true, 1)
 		guard let context = UIGraphicsGetCurrentContext() else {return}
 		for y in (0..<VMU_DISP_PIXEL_HEIGHT) {
 			for x in (0..<VMU_DISP_PIXEL_WIDTH) {
 				let rect = CGRect(x: Int(x), y: Int(y), width: 1, height: 1)
-				context.setFillColor(gyVmuDisplayPixelGet(emulator.device, x, y) > 0 ? UIColor.black.cgColor : UIColor.white.cgColor)
+				context.setFillColor(gyVmuDisplayPixelGet(emulator.device, x, y) == 1 ? UIColor.black.cgColor : UIColor.white.cgColor)
 				context.fill(rect)
 			}
 		}
@@ -217,7 +208,6 @@ extension EmulatorController: SCNSceneRendererDelegate {
 	}
 	
 	private func processInputQueue() {
-		
 		if !emulator.inputMap.up.isEmpty {
 			gyVmuButtonStateSet(emulator.device, .init(0), emulator.inputMap.up.remove(at: 0))
 		}

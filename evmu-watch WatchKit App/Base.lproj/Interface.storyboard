@@ -14,7 +14,7 @@
             <objects>
                 <controller identifier="EmulatorController" contentMode="scaleAspectFit" fullScreen="YES" id="AgC-eL-Hgc" customClass="EmulatorController" customModule="evmu_watch_WatchKit_Extension">
                     <items>
-                        <sceneKitScene width="136" height="90.599999999999994" alignment="center" autoenablesDefaultLighting="YES" jitteringEnabled="YES" loops="YES" playing="YES" id="vxu-ke-vy1">
+                        <sceneKitScene width="136" height="90.599999999999994" alignment="center" loops="YES" playing="YES" id="vxu-ke-vy1">
                             <gestureRecognizers>
                                 <panGestureRecognizer id="V3B-M2-FUb">
                                     <connections>
@@ -122,7 +122,25 @@
         <!--EmulatorSettingsController-->
         <scene sceneID="YSS-Wn-Pt9">
             <objects>
-                <controller identifier="EmulatorSettingsController" id="2MK-5c-76v" customClass="EmulatorSettingsController" customModule="evmu_watch_WatchKit_Extension"/>
+                <controller identifier="EmulatorSettingsController" id="2MK-5c-76v" customClass="EmulatorSettingsController" customModule="evmu_watch_WatchKit_Extension">
+                    <items>
+                        <table alignment="center" verticalAlignment="center" spacing="5" id="0fq-GT-8h2">
+                            <items>
+                                <tableRow identifier="SettingsTableRowController" id="h8E-jf-UJn">
+                                    <group key="rootItem" width="1" alignment="left" id="eNu-XK-CpO">
+                                        <items>
+                                            <button width="1" height="1" alignment="center" verticalAlignment="center" id="5Ms-93-nxX"/>
+                                        </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                    </group>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="settingsList" destination="0fq-GT-8h2" id="eVg-lc-QcL"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="466" y="29"/>
         </scene>
