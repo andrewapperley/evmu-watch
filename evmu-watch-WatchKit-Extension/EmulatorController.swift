@@ -42,7 +42,7 @@ protocol EmulatorDelegate: class {
 }
 
 protocol InputHandling {
-	mutating func updateInputMap(input: InputMap.Inputs, finished: Bool)
+	func updateInputMap(input: InputMap.Inputs, finished: Bool)
 }
 
 class Emulator {
