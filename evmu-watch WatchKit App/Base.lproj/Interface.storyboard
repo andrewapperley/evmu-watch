@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc" pageOrientation="vertical">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,12 +9,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--EmulatorController-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller fullScreen="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="evmu_watch_WatchKit_App" customModuleProvider="target">
+                <controller identifier="EmulatorController" contentMode="scaleAspectFit" fullScreen="YES" id="AgC-eL-Hgc" customClass="EmulatorController" customModule="evmu_watch_WatchKit_Extension">
                     <items>
-                        <sceneKitScene width="136" height="90.599999999999994" alignment="center" loops="YES" playing="YES" id="vxu-ke-vy1">
+                        <sceneKitScene width="136" height="90.599999999999994" alignment="center" autoenablesDefaultLighting="YES" jitteringEnabled="YES" loops="YES" playing="YES" id="vxu-ke-vy1">
                             <gestureRecognizers>
                                 <panGestureRecognizer id="V3B-M2-FUb">
                                     <connections>
@@ -66,12 +66,65 @@
                             </items>
                         </group>
                     </items>
+                    <menu key="menu" id="XaZ-Sq-d7W">
+                        <items>
+                            <menuItem title="ROM Selection" icon="maybe" id="SOS-Iw-rrC">
+                                <connections>
+                                    <action selector="showRomSelectionView" destination="AgC-eL-Hgc" id="mh3-hh-Zr3"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Settings" icon="more" id="fmA-IG-6jN">
+                                <connections>
+                                    <action selector="showSettings" destination="AgC-eL-Hgc" id="YYM-9R-VA0"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="screen" destination="vxu-ke-vy1" id="s9W-CJ-0zH"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="34" y="29"/>
+        </scene>
+        <!--RomSelectionController-->
+        <scene sceneID="IZC-Sn-zik">
+            <objects>
+                <controller identifier="RomSelectionController" id="DQX-jz-YWd" customClass="RomSelectionController" customModule="evmu_watch_WatchKit_Extension">
+                    <items>
+                        <table alignment="center" verticalAlignment="center" spacing="5" id="0Ni-dT-DZ1">
+                            <items>
+                                <tableRow identifier="RomTableRowController" selectable="NO" id="LRS-BJ-h9F" customClass="RomTableRowController" customModule="evmu_watch_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="jBY-Ov-ywg">
+                                        <items>
+                                            <button width="1" height="1" alignment="center" verticalAlignment="center" id="cFS-Ak-Nxd">
+                                                <connections>
+                                                    <action selector="didSelectRom" destination="LRS-BJ-h9F" id="czf-bJ-LRv"/>
+                                                </connections>
+                                            </button>
+                                        </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="nameButton" destination="cFS-Ak-Nxd" id="9Tt-sY-gHz"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="romList" destination="0Ni-dT-DZ1" id="HQ9-18-Fcd"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="251" y="29"/>
+        </scene>
+        <!--EmulatorSettingsController-->
+        <scene sceneID="YSS-Wn-Pt9">
+            <objects>
+                <controller identifier="EmulatorSettingsController" id="2MK-5c-76v" customClass="EmulatorSettingsController" customModule="evmu_watch_WatchKit_Extension"/>
+            </objects>
+            <point key="canvasLocation" x="466" y="29"/>
         </scene>
     </scenes>
 </document>
