@@ -10,3 +10,6 @@
 
 ### Revised version of Input
 ![](./gifs/vmu-input-2.gif)
+
+### ROM selection
+![](./gifs/vmu-rom-selection.gif)
