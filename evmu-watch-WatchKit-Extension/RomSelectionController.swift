@@ -35,7 +35,7 @@ class RomSelectionController: WKInterfaceController {
 		super.willActivate()
 		let dci = Bundle.main.paths(forResourcesOfType: "dci", inDirectory: nil)
 		let vms = Bundle.main.paths(forResourcesOfType: "vms", inDirectory: nil)
-		let paths = dci + vms
+		let paths = dci + vms.removeVMSWithoutVMI()
 		
 		romList.setNumberOfRows(paths.count, withRowType: "RomTableRowController")
 		
@@ -54,5 +54,26 @@ extension RomSelectionController: RomSelectionControllerDelegate {
 	func didSelectRom(at path: String) {
 		delegate?.didSelectRom(path: path)
 		dismiss()
+	}
+}
+
+extension Array where Element == String {
+	func removeVMSWithoutVMI() -> [String] {
+		let vmi = Bundle.main.paths(forResourcesOfType: "vmi", inDirectory: nil)
+		return self.filter({ (vmsPath) -> Bool in
+			let url = URL(fileURLWithPath: vmsPath, isDirectory: false, relativeTo: nil)
+			let vmsFileName = url.pathComponents.last!.replacingOccurrences(of: "vms", with: "vmi")
+			var found = false
+			for vmiPath in vmi {
+				let url = URL(fileURLWithPath: vmiPath, isDirectory: false, relativeTo: nil)
+				let vmiFileName = url.pathComponents.last!
+				if vmiFileName == vmsFileName {
+					found = false
+					break
+				}
+			}
+			
+			return found
+		})
 	}
 }
