@@ -39,6 +39,8 @@ struct InputMap {
 
 protocol EmulatorDelegate: class {
 	func didSelectRom(path: String)
+	func didSelectPalette(color: CGColor)
+	func didUpdateSettings()
 }
 
 protocol InputHandling {
@@ -46,12 +48,29 @@ protocol InputHandling {
 }
 
 class Emulator {
+	var paletteColor: CGColor = UIColor.black.cgColor
 	var inputMap = InputMap()
 	var currentRomPath: String? = nil
 	let device = gyVmuDeviceCreate()
 	var updateTime: TimeInterval = 0
+
+	init() {
+		updateSettings()
+	}
+	
+	func updateSettings() {
+		let ghosting: Int32 = UserDefaults.standard.bool(forKey: SettingsConstants.PixelGhosting) ? 1 : 0
+		gyVmuDisplayGhostingEnabledSet(device, ghosting)
+		
+		let lowPower: Int32 = UserDefaults.standard.bool(forKey: SettingsConstants.LowPowerMode) ? 1 : 0
+		gyVmuBatteryLowSet(device, lowPower)
+		gyVmuBatteryMonitorEnabledSet(device, lowPower)
+	}
 	
 	func loadRom(at path: String) {
+		if let game = gyVmuFlashDirEntryGame(device) {
+			gyVmuFlashFileDelete(device, game)
+		}
 		gyVmuDeviceReset(device)
 		var status: VMU_LOAD_IMAGE_STATUS! = VMU_LOAD_IMAGE_STATUS(rawValue: 0)
 		gyVmuFlashLoadImage(device, path, &status)
@@ -118,11 +137,15 @@ class EmulatorController: WKInterfaceController {
 	}
 	
 	@IBAction func showSettings() {
-		presentController(withName: "EmulatorSettingsController", context: nil)
+		presentController(withName: "EmulatorSettingsController", context: self)
 	}
 	
 	@IBAction func showRomSelectionView() {
 		presentController(withName: "RomSelectionController", context: self)
+	}
+	
+	@IBAction func showPaletteSelectionView() {
+		presentController(withName: "PaletteSelectionController", context: self)
 	}
 	
 	@IBAction func onUpTapped() {
@@ -173,6 +196,14 @@ class EmulatorController: WKInterfaceController {
 }
 
 extension EmulatorController: EmulatorDelegate {
+	func didUpdateSettings() {
+		emulator.updateSettings()
+	}
+	
+	func didSelectPalette(color: CGColor) {
+		emulator.paletteColor = color
+	}
+	
 	func didSelectRom(path: String) {
 		emulator.loadRom(at: path)
 	}
@@ -188,23 +219,57 @@ extension EmulatorController: SCNSceneRendererDelegate {
 		// Process input queue
 		processInputQueue()
 		
+		let contextSize = CGSize(width: CGFloat(VMU_DISP_PIXEL_WIDTH), height: CGFloat(VMU_DISP_PIXEL_HEIGHT))
+		UIGraphicsBeginImageContextWithOptions(contextSize, true, 1)
+		guard let context = UIGraphicsGetCurrentContext() else {return}
+		var updatedFB = false
+		if gyVmuDisplayEnabled(emulator.device) == 0 {
+			updatedFB = drawScreensaver(context)
+		} else if (gyVmuDisplayUpdateEnabled(emulator.device) == 1) {
+			updatedFB = drawFrame(context, time)
+		}
+		guard updatedFB else {
+			UIGraphicsEndImageContext()
+			return
+		}
+		scene.background.contents = UIGraphicsGetImageFromCurrentImageContext()
+		UIGraphicsEndImageContext()
+	}
+	
+	private func drawFrame(_ context: CGContext, _ time: TimeInterval) -> Bool {
 		if emulator.updateTime == 0.0 { emulator.updateTime = time }
 		let deltaTime: Float = Float(min(time - emulator.updateTime, 1.0))
 		emulator.updateTime = time
 		
-		gyVmuDeviceUpdate(emulator.device, deltaTime)
-		UIGraphicsBeginImageContextWithOptions(CGSize(width: CGFloat(VMU_DISP_PIXEL_WIDTH), height: CGFloat(VMU_DISP_PIXEL_HEIGHT)), true, 1)
-		guard let context = UIGraphicsGetCurrentContext() else {return}
+		guard gyVmuDeviceUpdate(emulator.device, deltaTime) == 1 else { return false }
+		
 		for y in (0..<VMU_DISP_PIXEL_HEIGHT) {
 			for x in (0..<VMU_DISP_PIXEL_WIDTH) {
+				let pixel = gyVmuDisplayPixelGhostValue(emulator.device, x, y)
+				let color = UIColor.init(red: CGFloat(pixel)/255.0, green: CGFloat(pixel)/255.0, blue: CGFloat(pixel)/255.0, alpha: 1).cgColor
 				let rect = CGRect(x: Int(x), y: Int(y), width: 1, height: 1)
-				context.setFillColor(gyVmuDisplayPixelGet(emulator.device, x, y) == 1 ? UIColor.black.cgColor : UIColor.white.cgColor)
+				context.setFillColor(color)
 				context.fill(rect)
 			}
 		}
+		context.setBlendMode(.difference)
+		context.setFillColor(emulator.paletteColor)
+		context.fill(CGRect(origin: .zero, size: CGSize(width: context.width, height: context.height)))
+		return true
+	}
+	
+	private func drawScreensaver(_ context: CGContext) -> Bool {
+		guard
+			let dirEntry = gyVmuFlashDirEntryGame(emulator.device),
+			let vmsHeader = gyVmuFlashDirEntryVmsHeader(emulator.device, dirEntry)?.pointee,
+			let data = gyVmuVMSFileInfoCreateIconsARGB444(emulator.device, dirEntry)
+		else { return false }
+
+		for i in stride(from: 0, through: vmsHeader.iconCount, by: 1) {
+
+		}
 		
-		scene.background.contents = UIGraphicsGetImageFromCurrentImageContext()
-		UIGraphicsEndImageContext()
+		return true
 	}
 	
 	private func processInputQueue() {

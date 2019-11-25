@@ -13,5 +13,6 @@
 #import "gyro_vmu_display.h"
 #import "gyro_vmu_flash.h"
 #import "gyro_vmu_gamepad.h"
+#import "gyro_vmu_battery.h"
 
 #endif /* Evmu_watch_bridging_header_h */

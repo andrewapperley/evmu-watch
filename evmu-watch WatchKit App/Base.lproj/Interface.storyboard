@@ -78,6 +78,11 @@
                                     <action selector="showSettings" destination="AgC-eL-Hgc" id="YYM-9R-VA0"/>
                                 </connections>
                             </menuItem>
+                            <menuItem title="Palette" icon="block" id="AKz-5J-z3n">
+                                <connections>
+                                    <action selector="showPaletteSelectionView" destination="AgC-eL-Hgc" id="mgN-Qe-IGP"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                     <connections>
@@ -126,23 +131,62 @@
                     <items>
                         <table alignment="center" verticalAlignment="center" spacing="5" id="0fq-GT-8h2">
                             <items>
-                                <tableRow identifier="SettingsTableRowController" id="h8E-jf-UJn">
+                                <tableRow identifier="SettingsTableRowController" id="h8E-jf-UJn" customClass="SettingsTableRowController" customModule="evmu_watch_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="eNu-XK-CpO">
                                         <items>
-                                            <button width="1" height="1" alignment="center" verticalAlignment="center" id="5Ms-93-nxX"/>
+                                            <button width="1" height="1" alignment="center" verticalAlignment="center" id="5Ms-93-nxX">
+                                                <connections>
+                                                    <action selector="didSelectSetting" destination="h8E-jf-UJn" id="TT7-75-I1o"/>
+                                                </connections>
+                                            </button>
                                         </items>
                                         <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                     </group>
+                                    <connections>
+                                        <outlet property="settingButton" destination="5Ms-93-nxX" id="ZkZ-7n-PZP"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
                     <connections>
-                        <outlet property="settingsList" destination="0fq-GT-8h2" id="eVg-lc-QcL"/>
+                        <outlet property="settingsList" destination="0fq-GT-8h2" id="du8-6f-zkh"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="466" y="29"/>
+        </scene>
+        <!--PaletteSelectionController-->
+        <scene sceneID="r5V-Pe-ilk">
+            <objects>
+                <controller identifier="PaletteSelectionController" id="HOF-R3-hAo" customClass="PaletteSelectionController" customModule="evmu_watch_WatchKit_Extension">
+                    <items>
+                        <table alignment="center" verticalAlignment="center" spacing="5" id="9bR-PH-Gzb">
+                            <items>
+                                <tableRow identifier="PaletteTableRowController" id="arO-c3-eyY" customClass="PaletteTableRowController" customModule="evmu_watch_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="e9N-Wa-zXF">
+                                        <items>
+                                            <button width="1" height="1" alignment="center" verticalAlignment="center" id="bxg-zr-ixM">
+                                                <connections>
+                                                    <action selector="didSelectPalette" destination="arO-c3-eyY" id="zUY-eE-pQd"/>
+                                                </connections>
+                                            </button>
+                                        </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="colorButton" destination="bxg-zr-ixM" id="z0H-jq-SJy"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="colorList" destination="9bR-PH-Gzb" id="dae-sd-M4h"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="680" y="29"/>
         </scene>
     </scenes>
 </document>
