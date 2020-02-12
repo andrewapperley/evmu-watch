@@ -32,14 +32,12 @@ class SettingsTableRowController: NSObject {
 
 struct SettingsConstants {
 	static let LowPowerMode = "Low Power Mode"
-	static let BilinearFiltering = "Bilinear Filtering"
 	static let Audio = "Audio"
 	static let PixelGhosting = "Pixel Ghosting"
 }
 
 private let Settings = [
 	SettingsConstants.LowPowerMode,
-	SettingsConstants.BilinearFiltering,
 	SettingsConstants.Audio,
 	SettingsConstants.PixelGhosting
 ]

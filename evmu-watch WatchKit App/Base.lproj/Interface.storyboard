@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc" pageOrientation="vertical">
-    <device id="watch38" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15705" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc" pageOrientation="vertical">
+    <device id="watch38"/>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
     </dependencies>
     <scenes>
         <!--EmulatorController-->
@@ -14,18 +12,15 @@
             <objects>
                 <controller identifier="EmulatorController" contentMode="scaleAspectFit" fullScreen="YES" id="AgC-eL-Hgc" customClass="EmulatorController" customModule="evmu_watch_WatchKit_Extension">
                     <items>
-                        <sceneKitScene width="136" height="90.599999999999994" alignment="center" loops="YES" playing="YES" id="vxu-ke-vy1">
-                            <gestureRecognizers>
-                                <panGestureRecognizer id="V3B-M2-FUb">
-                                    <connections>
-                                        <action selector="onSleepAndModeTapped:" destination="AgC-eL-Hgc" id="T31-5C-kBb"/>
-                                    </connections>
-                                </panGestureRecognizer>
-                            </gestureRecognizers>
-                        </sceneKitScene>
+                        <group width="144" height="96" alignment="center" verticalAlignment="center" layout="vertical" spacing="0.0" id="BLP-ZP-mT9">
+                            <items>
+                                <spriteKitScene width="144" height="96" alignment="center" verticalAlignment="center" preferredFramesPerSecond="60" id="GVT-VP-bKZ"/>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                        </group>
                         <group width="1" height="0.40000000000000002" alignment="center" verticalAlignment="bottom" layout="overlap" id="yVK-1E-eWM">
                             <items>
-                                <group width="0.69999999999999996" height="1" alignment="left" layout="overlap" id="bjT-NQ-jVK">
+                                <group width="0.69999999999999996" height="1" alignment="left" verticalAlignment="center" layout="overlap" id="bjT-NQ-jVK">
                                     <items>
                                         <button width="30" height="30" alignment="center" backgroundImage="UButton" id="Ve3-fr-FkH">
                                             <connections>
@@ -49,7 +44,7 @@
                                         </button>
                                     </items>
                                 </group>
-                                <group width="0.29999999999999999" height="1" alignment="right" layout="overlap" id="IeL-r7-Vi2">
+                                <group width="0.29999999999999999" height="1" alignment="right" verticalAlignment="center" layout="overlap" id="IeL-r7-Vi2">
                                     <items>
                                         <button width="30" height="30" alignment="center" backgroundImage="AButton" id="oLv-Ov-qnq">
                                             <connections>
@@ -86,7 +81,7 @@
                         </items>
                     </menu>
                     <connections>
-                        <outlet property="screen" destination="vxu-ke-vy1" id="s9W-CJ-0zH"/>
+                        <outlet property="screen" destination="GVT-VP-bKZ" id="VRb-ez-Zye"/>
                     </connections>
                 </controller>
             </objects>
@@ -189,4 +184,12 @@
             <point key="canvasLocation" x="680" y="29"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AButton" width="452" height="451"/>
+        <image name="BButton" width="450" height="450"/>
+        <image name="DButton" width="450" height="450"/>
+        <image name="LButton" width="450" height="450"/>
+        <image name="RButton" width="450" height="450"/>
+        <image name="UButton" width="450" height="450"/>
+    </resources>
 </document>

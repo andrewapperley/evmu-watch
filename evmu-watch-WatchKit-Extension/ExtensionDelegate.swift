@@ -12,6 +12,11 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
+		if UserDefaults.standard.string(forKey: PaletteSelectionConstants.PaletteSelected) == nil {
+			UserDefaults.standard.set("None", forKey: PaletteSelectionConstants.PaletteSelected)
+		}
+		
+		UserDefaults.standard.synchronize()
     }
 
     func applicationDidBecomeActive() {

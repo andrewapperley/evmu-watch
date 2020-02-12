@@ -48,12 +48,13 @@ protocol InputHandling {
 }
 
 class Emulator {
-	var paletteColor: CGColor = UIColor.black.cgColor
+	let screenScalar: Int = 3
+	var paletteColor: CGColor = UserDefaults.getPalette()
 	var inputMap = InputMap()
 	var currentRomPath: String? = nil
 	let device = gyVmuDeviceCreate()
 	var updateTime: TimeInterval = 0
-
+	
 	init() {
 		updateSettings()
 	}
@@ -114,7 +115,8 @@ extension Emulator: InputHandling {
 
 class EmulatorController: WKInterfaceController {
 	let emulator = Emulator()
-	@IBOutlet weak var screen: WKInterfaceSCNScene!
+	@IBOutlet weak var screen: WKInterfaceSKScene!
+	var contextSize: CGSize = .zero
 	
 	override func didAppear() {
 		super.didAppear()
@@ -127,13 +129,12 @@ class EmulatorController: WKInterfaceController {
 		super.awake(withContext: context)
 		showRomSelectionView()
 		guard screen.scene == nil else { return }
-		
-		let scene = SCNScene()
-		let action = SCNAction.scale(by: 1.0, duration: 1.0)
-		let repeatAction = SCNAction.repeatForever(action)
-		scene.rootNode.runAction(repeatAction)
-		screen.scene = scene
-		screen.delegate = self
+		updateScreenSize()
+		let scene = SKScene(size: self.contextSize)
+		scene.blendMode = .replace
+		generatePixels(for: scene)
+		scene.delegate = self
+		screen.presentScene(scene)
 	}
 	
 	@IBAction func showSettings() {
@@ -193,6 +194,25 @@ class EmulatorController: WKInterfaceController {
 			break
 		}
 	}
+	
+	private func generatePixels(for scene: SKScene) {
+		for y in (0..<VMU_DISP_PIXEL_HEIGHT) {
+			for x in (0..<VMU_DISP_PIXEL_WIDTH) {
+				let point = CGPoint(x: Int(x)*emulator.screenScalar, y: Int(contextSize.height) - (Int(y)*emulator.screenScalar))
+				let rect = CGRect(origin: point, size: CGSize(width: emulator.screenScalar, height: emulator.screenScalar))
+				let pixel = SKShapeNode(rect: rect)
+				pixel.blendMode = .screen
+				pixel.strokeColor = .clear
+				scene.addChild(pixel)
+			}
+		}
+	}
+	
+	private func updateScreenSize() {
+		self.contextSize = CGSize(width: Int(VMU_DISP_PIXEL_WIDTH)*emulator.screenScalar, height: Int(VMU_DISP_PIXEL_HEIGHT-1)*emulator.screenScalar)
+		self.screen.setWidth(contextSize.width)
+		self.screen.setHeight(contextSize.height)
+	}
 }
 
 extension EmulatorController: EmulatorDelegate {
@@ -202,6 +222,7 @@ extension EmulatorController: EmulatorDelegate {
 	
 	func didSelectPalette(color: CGColor) {
 		emulator.paletteColor = color
+		screen.scene!.backgroundColor = UIColor(cgColor: emulator.paletteColor)
 	}
 	
 	func didSelectRom(path: String) {
@@ -209,52 +230,36 @@ extension EmulatorController: EmulatorDelegate {
 	}
 }
 
-extension EmulatorController: SCNSceneRendererDelegate {
-	func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
-		
-		guard let scene = self.screen.scene else {
-			return
-		}
-		
+extension EmulatorController: SKSceneDelegate {
+	func update(_ currentTime: TimeInterval, for scene: SKScene) {
 		// Process input queue
 		processInputQueue()
-		
-		let contextSize = CGSize(width: CGFloat(VMU_DISP_PIXEL_WIDTH), height: CGFloat(VMU_DISP_PIXEL_HEIGHT))
-		UIGraphicsBeginImageContextWithOptions(contextSize, true, 1)
-		guard let context = UIGraphicsGetCurrentContext() else {return}
 		var updatedFB = false
 		if gyVmuDisplayEnabled(emulator.device) == 0 {
-			updatedFB = drawScreensaver(context)
-		} else if (gyVmuDisplayUpdateEnabled(emulator.device) == 1) {
-			updatedFB = drawFrame(context, time)
+//			updatedFB = drawScreensaver(context)
+		} else if (gyVmuDisplayUpdateEnabled(emulator.device) == 1) && emulator.currentRomPath != nil {
+			// Draw new frame
+			updatedFB = drawFrame(scene, currentTime)
 		}
-		guard updatedFB else {
-			UIGraphicsEndImageContext()
-			return
+		if updatedFB {
+			
 		}
-		scene.background.contents = UIGraphicsGetImageFromCurrentImageContext()
-		UIGraphicsEndImageContext()
 	}
-	
-	private func drawFrame(_ context: CGContext, _ time: TimeInterval) -> Bool {
+
+	private func drawFrame(_ scene: SKScene, _ time: TimeInterval) -> Bool {
 		if emulator.updateTime == 0.0 { emulator.updateTime = time }
 		let deltaTime: Float = Float(min(time - emulator.updateTime, 1.0))
 		emulator.updateTime = time
 		
 		guard gyVmuDeviceUpdate(emulator.device, deltaTime) == 1 else { return false }
-		
-		for y in (0..<VMU_DISP_PIXEL_HEIGHT) {
-			for x in (0..<VMU_DISP_PIXEL_WIDTH) {
-				let pixel = gyVmuDisplayPixelGhostValue(emulator.device, x, y)
-				let color = UIColor.init(red: CGFloat(pixel)/255.0, green: CGFloat(pixel)/255.0, blue: CGFloat(pixel)/255.0, alpha: 1).cgColor
-				let rect = CGRect(x: Int(x), y: Int(y), width: 1, height: 1)
-				context.setFillColor(color)
-				context.fill(rect)
-			}
+		for pixel in scene.children {
+			let x = Int(pixel.frame.origin.x) / emulator.screenScalar
+			let y = (Int(contextSize.height - pixel.frame.origin.y)) / emulator.screenScalar
+			let pixelValue = gyVmuDisplayPixelGhostValue(emulator.device, Int32(x), Int32(y))
+			let color = UIColor.init(red: CGFloat(pixelValue)/255.0, green: CGFloat(pixelValue)/255.0, blue: CGFloat(pixelValue)/255.0, alpha: 0.9)
+			(pixel as? SKShapeNode)?.fillColor = color
 		}
-		context.setBlendMode(.difference)
-		context.setFillColor(emulator.paletteColor)
-		context.fill(CGRect(origin: .zero, size: CGSize(width: context.width, height: context.height)))
+		
 		return true
 	}
 	
@@ -304,5 +309,9 @@ extension EmulatorController: SCNSceneRendererDelegate {
 		if !emulator.inputMap.sleep.isEmpty {
 			gyVmuButtonStateSet(emulator.device, .init(7), emulator.inputMap.sleep.remove(at: 0))
 		}
+	}
+	
+	func didFinishUpdate(for scene: SKScene) {
+		
 	}
 }
