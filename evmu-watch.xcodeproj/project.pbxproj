@@ -70,6 +70,8 @@
 		0F52102422B68FEA0054BBFC /* gyro_debug_ios.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F52102322B68FEA0054BBFC /* gyro_debug_ios.c */; };
 		0F54A32F2337E4C300829BE7 /* pacman.dci in Resources */ = {isa = PBXBuildFile; fileRef = 0F54A32D2337E4BB00829BE7 /* pacman.dci */; };
 		0F54A3302337E4C300829BE7 /* pacman.dci in Resources */ = {isa = PBXBuildFile; fileRef = 0F54A32D2337E4BB00829BE7 /* pacman.dci */; };
+		0F7D4FA623F57DAD00931851 /* StateManagementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7D4FA523F57DAD00931851 /* StateManagementController.swift */; };
+		0F7D4FA823F5862000931851 /* Emulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7D4FA723F5862000931851 /* Emulator.swift */; };
 		0F932CE522BD100300DA4149 /* turfs_file_stdio.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F932CE422BD100300DA4149 /* turfs_file_stdio.c */; };
 		0F968BD722EF714900E594CA /* chao adventure 1.dci in Resources */ = {isa = PBXBuildFile; fileRef = 0F968BD522EF714900E594CA /* chao adventure 1.dci */; };
 		0F968BD822EF714900E594CA /* chao adventure 1.dci in Resources */ = {isa = PBXBuildFile; fileRef = 0F968BD522EF714900E594CA /* chao adventure 1.dci */; };
@@ -236,6 +238,8 @@
 		0F52102322B68FEA0054BBFC /* gyro_debug_ios.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gyro_debug_ios.c; sourceTree = "<group>"; };
 		0F52102522B691C40054BBFC /* Evmu-watch-bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Evmu-watch-bridging-header.h"; sourceTree = "<group>"; };
 		0F54A32D2337E4BB00829BE7 /* pacman.dci */ = {isa = PBXFileReference; lastKnownFileType = file; path = pacman.dci; sourceTree = "<group>"; };
+		0F7D4FA523F57DAD00931851 /* StateManagementController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManagementController.swift; sourceTree = "<group>"; };
+		0F7D4FA723F5862000931851 /* Emulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emulator.swift; sourceTree = "<group>"; };
 		0F932C4722BA79EB00DA4149 /* evmu-watch WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "evmu-watch WatchKit App.entitlements"; sourceTree = "<group>"; };
 		0F932C4822BA79EF00DA4149 /* evmu-watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "evmu-watch.entitlements"; sourceTree = "<group>"; };
 		0F932CE422BD100300DA4149 /* turfs_file_stdio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = turfs_file_stdio.c; sourceTree = "<group>"; };
@@ -322,6 +326,8 @@
 				0F462CE122E0964E00682AAC /* RomSelectionController.swift */,
 				0F968BDB22EF724F00E594CA /* EmulatorController.swift */,
 				0FD47FEC2338FF4B00A0DCBE /* PaletteSelectionController.swift */,
+				0F7D4FA523F57DAD00931851 /* StateManagementController.swift */,
+				0F7D4FA723F5862000931851 /* Emulator.swift */,
 			);
 			path = "evmu-watch-WatchKit-Extension";
 			sourceTree = "<group>";
@@ -696,6 +702,7 @@
 			files = (
 				0F520CC922B57EDB0054BBFC /* gyro_vmu_instr.c in Sources */,
 				0F462CE222E0964E00682AAC /* RomSelectionController.swift in Sources */,
+				0F7D4FA623F57DAD00931851 /* StateManagementController.swift in Sources */,
 				0F52101E22B68EEE0054BBFC /* gyro_timer.c in Sources */,
 				0F52101122B68BBE0054BBFC /* turfs_common.c in Sources */,
 				0F52101022B68BBE0054BBFC /* turfs_strings.c in Sources */,
@@ -705,6 +712,7 @@
 				0F520CC022B57EDB0054BBFC /* gyro_vmu_util.c in Sources */,
 				0F520CCC22B57EDB0054BBFC /* gyro_vmu_osc.c in Sources */,
 				0F520CC322B57EDB0054BBFC /* gyro_vmu_port7.c in Sources */,
+				0F7D4FA823F5862000931851 /* Emulator.swift in Sources */,
 				0F520CB722B57EDB0054BBFC /* gyro_vmu_lcd.c in Sources */,
 				0F52100622B5A17C0054BBFC /* gyro_audio_al.c in Sources */,
 				0F932CE522BD100300DA4149 /* turfs_file_stdio.c in Sources */,
