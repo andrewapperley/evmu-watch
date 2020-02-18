@@ -36,6 +36,7 @@ struct InputMap {
 }
 
 protocol EmulatorDelegate: class {
+	var currentAppName: String? { get }
 	func didSelectRom(path: String)
 	func didSelectPalette(color: CGColor)
 	func didUpdateSettings()

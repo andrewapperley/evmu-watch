@@ -129,6 +129,14 @@ class EmulatorController: WKInterfaceController {
 }
 
 extension EmulatorController: EmulatorDelegate {
+	var currentAppName: String? {
+		guard let appPath = emulator.currentRomPath else { return nil }
+		let parts = appPath.split(separator: "/")
+		guard let fileName = parts.last,
+			let appName = fileName.split(separator: ".").first else { return nil }
+		return String(appName.replacingOccurrences(of: " ", with: "-"))
+	}
+	
 	func didUpdateSettings() {
 		emulator.updateSettings()
 	}
