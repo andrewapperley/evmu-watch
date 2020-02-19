@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreGraphics
+import UIKit.UIImage
 
 struct InputMap {
 	enum Inputs {
@@ -36,6 +37,7 @@ struct InputMap {
 }
 
 protocol EmulatorDelegate: class {
+	var currentScreenshot: UIImage? { get }
 	var currentAppName: String? { get }
 	func didSelectRom(path: String)
 	func didSelectPalette(color: CGColor)

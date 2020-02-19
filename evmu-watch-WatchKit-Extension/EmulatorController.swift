@@ -121,6 +121,23 @@ class EmulatorController: WKInterfaceController {
 		}
 	}
 	
+	private func generateScreenshot() -> UIImage? {
+		UIGraphicsBeginImageContextWithOptions(CGSize(width: Int(VMU_DISP_PIXEL_WIDTH), height: Int(VMU_DISP_PIXEL_HEIGHT)), true, 0)
+		guard let context = UIGraphicsGetCurrentContext() else { return nil }
+		for y in (0..<VMU_DISP_PIXEL_HEIGHT) {
+			for x in (0..<VMU_DISP_PIXEL_WIDTH) {
+				let pixel = gyVmuDisplayPixelGhostValue(emulator.device, x, y)
+				let color = UIColor.init(red: CGFloat(pixel)/255.0, green: CGFloat(pixel)/255.0, blue: CGFloat(pixel)/255.0, alpha: 1).cgColor
+				let rect = CGRect(x: Int(x), y: Int(y), width: 1, height: 1)
+				context.setFillColor(color)
+				context.fill(rect)
+			}
+		}
+		let screenShot = UIGraphicsGetImageFromCurrentImageContext()
+		UIGraphicsEndImageContext()
+		return screenShot
+	}
+	
 	private func updateScreenSize() {
 		self.contextSize = CGSize(width: Int(VMU_DISP_PIXEL_WIDTH)*emulator.screenScalar, height: Int(VMU_DISP_PIXEL_HEIGHT-1)*emulator.screenScalar)
 		self.screen.setWidth(contextSize.width)
@@ -129,6 +146,11 @@ class EmulatorController: WKInterfaceController {
 }
 
 extension EmulatorController: EmulatorDelegate {
+	var currentScreenshot: UIImage? {
+		
+		return generateScreenshot()
+	}
+	
 	var currentAppName: String? {
 		guard let appPath = emulator.currentRomPath else { return nil }
 		let parts = appPath.split(separator: "/")

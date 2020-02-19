@@ -195,46 +195,35 @@
                     <items>
                         <group width="1" alignment="center" layout="vertical" id="bXc-B4-5oN">
                             <items>
-                                <label alignment="left" text="Save Slots" id="qOE-Cs-HIE">
-                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                                </label>
-                                <table alignment="center" id="Q3e-G3-9yN">
-                                    <items>
-                                        <tableRow identifier="StateManagementTableRowController" id="me5-ty-bPt" customClass="StateManagementTableRowController" customModule="evmu_watch_WatchKit_Extension">
-                                            <group key="rootItem" width="1" alignment="left" id="rih-81-LTt">
-                                                <items>
-                                                    <button width="1" height="1" alignment="center" verticalAlignment="center" id="4qR-Cg-Q3f">
-                                                        <connections>
-                                                            <action selector="didSelectSlot" destination="me5-ty-bPt" id="MQQ-Pj-RH5"/>
-                                                        </connections>
-                                                    </button>
-                                                </items>
-                                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
-                                            </group>
-                                            <connections>
-                                                <outlet property="slotButton" destination="4qR-Cg-Q3f" id="92R-UV-a2h"/>
-                                            </connections>
-                                        </tableRow>
-                                    </items>
-                                </table>
+                                <button width="1" alignment="left" title="Save State" id="isn-vm-Z6q">
+                                    <connections>
+                                        <action selector="didSaveState" destination="1LV-H9-Pwe" id="gVz-I1-XeU"/>
+                                    </connections>
+                                </button>
                                 <label alignment="left" text="Load Slots" id="Yxu-F0-Psm">
                                     <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                 </label>
                                 <table alignment="center" id="iq8-cb-Yju">
                                     <items>
                                         <tableRow identifier="StateManagementTableRowController" id="eXj-Yo-HzG" customClass="StateManagementTableRowController" customModule="evmu_watch_WatchKit_Extension">
-                                            <group key="rootItem" width="1" alignment="left" id="Bse-cg-IgV">
+                                            <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="Bse-cg-IgV">
                                                 <items>
-                                                    <button width="1" height="1" alignment="left" id="QJQ-Zk-3IF">
+                                                    <imageView alignment="center" contentMode="scaleAspectFill" id="hPu-hu-7Bh"/>
+                                                    <label alignment="center" id="yMA-xa-kaK">
+                                                        <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                                    </label>
+                                                    <button width="100" alignment="center" verticalAlignment="bottom" title="Load State" id="QJQ-Zk-3IF">
                                                         <connections>
                                                             <action selector="didSelectSlot" destination="eXj-Yo-HzG" id="Jf2-mr-ebQ"/>
                                                         </connections>
                                                     </button>
                                                 </items>
-                                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                                <edgeInsets key="margins" left="5" right="5" top="10" bottom="10"/>
                                             </group>
                                             <connections>
-                                                <outlet property="slotButton" destination="QJQ-Zk-3IF" id="6lk-EO-TdL"/>
+                                                <outlet property="dateLabel" destination="yMA-xa-kaK" id="1Uk-ph-y5Z"/>
+                                                <outlet property="loadButton" destination="QJQ-Zk-3IF" id="HQz-J7-9V7"/>
+                                                <outlet property="screenshotImage" destination="hPu-hu-7Bh" id="LwN-vQ-z6z"/>
                                             </connections>
                                         </tableRow>
                                     </items>
@@ -244,11 +233,11 @@
                     </items>
                     <connections>
                         <outlet property="loadSlotList" destination="iq8-cb-Yju" id="3LH-Jy-5cK"/>
-                        <outlet property="saveSlotList" destination="Q3e-G3-9yN" id="rOZ-Q8-Gqz"/>
+                        <outlet property="saveStateButton" destination="isn-vm-Z6q" id="Pgy-Yc-X6l"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="893" y="29"/>
+            <point key="canvasLocation" x="901" y="51"/>
         </scene>
     </scenes>
     <resources>
