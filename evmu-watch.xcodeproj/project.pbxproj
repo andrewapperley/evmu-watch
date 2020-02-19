@@ -79,6 +79,20 @@
 		0F968BDA22EF714900E594CA /* chao adventure.dci in Resources */ = {isa = PBXBuildFile; fileRef = 0F968BD622EF714900E594CA /* chao adventure.dci */; };
 		0F968BDC22EF724F00E594CA /* EmulatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F968BDB22EF724F00E594CA /* EmulatorController.swift */; };
 		0FD47FED2338FF4B00A0DCBE /* PaletteSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD47FEC2338FF4B00A0DCBE /* PaletteSelectionController.swift */; };
+		0FD8025423FD7518007A150A /* extra_bg_lights.vmi in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8024D23FD7518007A150A /* extra_bg_lights.vmi */; };
+		0FD8025523FD7518007A150A /* extra_bg_lights.vmi in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8024D23FD7518007A150A /* extra_bg_lights.vmi */; };
+		0FD8025623FD7518007A150A /* SoulCalibur.vmi in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8024E23FD7518007A150A /* SoulCalibur.vmi */; };
+		0FD8025723FD7518007A150A /* SoulCalibur.vmi in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8024E23FD7518007A150A /* SoulCalibur.vmi */; };
+		0FD8025823FD7518007A150A /* extra_bg_lights.vms in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8024F23FD7518007A150A /* extra_bg_lights.vms */; };
+		0FD8025923FD7518007A150A /* extra_bg_lights.vms in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8024F23FD7518007A150A /* extra_bg_lights.vms */; };
+		0FD8025A23FD7518007A150A /* FLPPYBRD.vmi in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8025023FD7518007A150A /* FLPPYBRD.vmi */; };
+		0FD8025B23FD7518007A150A /* FLPPYBRD.vmi in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8025023FD7518007A150A /* FLPPYBRD.vmi */; };
+		0FD8025C23FD7518007A150A /* chaoadv2.dci in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8025123FD7518007A150A /* chaoadv2.dci */; };
+		0FD8025D23FD7518007A150A /* chaoadv2.dci in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8025123FD7518007A150A /* chaoadv2.dci */; };
+		0FD8025E23FD7518007A150A /* FLPPYBRD.vms in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8025223FD7518007A150A /* FLPPYBRD.vms */; };
+		0FD8025F23FD7518007A150A /* FLPPYBRD.vms in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8025223FD7518007A150A /* FLPPYBRD.vms */; };
+		0FD8026023FD7518007A150A /* SoulCalibur.vms in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8025323FD7518007A150A /* SoulCalibur.vms */; };
+		0FD8026123FD7518007A150A /* SoulCalibur.vms in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8025323FD7518007A150A /* SoulCalibur.vms */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -247,6 +261,13 @@
 		0F968BD622EF714900E594CA /* chao adventure.dci */ = {isa = PBXFileReference; lastKnownFileType = file; path = "chao adventure.dci"; sourceTree = "<group>"; };
 		0F968BDB22EF724F00E594CA /* EmulatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmulatorController.swift; sourceTree = "<group>"; };
 		0FD47FEC2338FF4B00A0DCBE /* PaletteSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteSelectionController.swift; sourceTree = "<group>"; };
+		0FD8024D23FD7518007A150A /* extra_bg_lights.vmi */ = {isa = PBXFileReference; lastKnownFileType = file; path = extra_bg_lights.vmi; sourceTree = "<group>"; };
+		0FD8024E23FD7518007A150A /* SoulCalibur.vmi */ = {isa = PBXFileReference; lastKnownFileType = file; path = SoulCalibur.vmi; sourceTree = "<group>"; };
+		0FD8024F23FD7518007A150A /* extra_bg_lights.vms */ = {isa = PBXFileReference; lastKnownFileType = file; path = extra_bg_lights.vms; sourceTree = "<group>"; };
+		0FD8025023FD7518007A150A /* FLPPYBRD.vmi */ = {isa = PBXFileReference; lastKnownFileType = file; path = FLPPYBRD.vmi; sourceTree = "<group>"; };
+		0FD8025123FD7518007A150A /* chaoadv2.dci */ = {isa = PBXFileReference; lastKnownFileType = file; path = chaoadv2.dci; sourceTree = "<group>"; };
+		0FD8025223FD7518007A150A /* FLPPYBRD.vms */ = {isa = PBXFileReference; lastKnownFileType = file; path = FLPPYBRD.vms; sourceTree = "<group>"; };
+		0FD8025323FD7518007A150A /* SoulCalibur.vms */ = {isa = PBXFileReference; lastKnownFileType = file; path = SoulCalibur.vms; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -525,6 +546,13 @@
 		0F52102622B69B180054BBFC /* files */ = {
 			isa = PBXGroup;
 			children = (
+				0FD8025123FD7518007A150A /* chaoadv2.dci */,
+				0FD8024D23FD7518007A150A /* extra_bg_lights.vmi */,
+				0FD8024F23FD7518007A150A /* extra_bg_lights.vms */,
+				0FD8025023FD7518007A150A /* FLPPYBRD.vmi */,
+				0FD8025223FD7518007A150A /* FLPPYBRD.vms */,
+				0FD8024E23FD7518007A150A /* SoulCalibur.vmi */,
+				0FD8025323FD7518007A150A /* SoulCalibur.vms */,
 				0F54A32D2337E4BB00829BE7 /* pacman.dci */,
 				0F968BD522EF714900E594CA /* chao adventure 1.dci */,
 				0F968BD622EF714900E594CA /* chao adventure.dci */,
@@ -659,11 +687,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FD8025C23FD7518007A150A /* chaoadv2.dci in Resources */,
+				0FD8025623FD7518007A150A /* SoulCalibur.vmi in Resources */,
 				0F520C3C22B57D3A0054BBFC /* Assets.xcassets in Resources */,
 				0F54A32F2337E4C300829BE7 /* pacman.dci in Resources */,
+				0FD8025E23FD7518007A150A /* FLPPYBRD.vms in Resources */,
 				0F968BD922EF714900E594CA /* chao adventure.dci in Resources */,
 				0F968BD722EF714900E594CA /* chao adventure 1.dci in Resources */,
+				0FD8025823FD7518007A150A /* extra_bg_lights.vms in Resources */,
+				0FD8026023FD7518007A150A /* SoulCalibur.vms in Resources */,
 				0F520C3A22B57D390054BBFC /* Interface.storyboard in Resources */,
+				0FD8025A23FD7518007A150A /* FLPPYBRD.vmi in Resources */,
+				0FD8025423FD7518007A150A /* extra_bg_lights.vmi in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,9 +706,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FD8025D23FD7518007A150A /* chaoadv2.dci in Resources */,
+				0FD8025523FD7518007A150A /* extra_bg_lights.vmi in Resources */,
 				0F520FFB22B59B380054BBFC /* gyro_matrix_sse_x86.inl in Resources */,
+				0FD8025F23FD7518007A150A /* FLPPYBRD.vms in Resources */,
+				0FD8026123FD7518007A150A /* SoulCalibur.vms in Resources */,
+				0FD8025723FD7518007A150A /* SoulCalibur.vmi in Resources */,
 				0F520CCD22B57EDB0054BBFC /* .gitmodules in Resources */,
 				0F968BDA22EF714900E594CA /* chao adventure.dci in Resources */,
+				0FD8025B23FD7518007A150A /* FLPPYBRD.vmi in Resources */,
 				0F52100022B59C4E0054BBFC /* gyro_video_ios.inl in Resources */,
 				0F52100122B59C4E0054BBFC /* gyro_input_ios.inl in Resources */,
 				0F968BD822EF714900E594CA /* chao adventure 1.dci in Resources */,
@@ -681,6 +722,7 @@
 				0F520FF822B5967E0054BBFC /* gyro_math_common.inl in Resources */,
 				0F520C4C22B57D3B0054BBFC /* Assets.xcassets in Resources */,
 				0F39F3A322BA596900782403 /* gyro_file_x86.inl in Resources */,
+				0FD8025923FD7518007A150A /* extra_bg_lights.vms in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

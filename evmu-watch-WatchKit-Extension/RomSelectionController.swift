@@ -68,7 +68,7 @@ extension Array where Element == String {
 				let url = URL(fileURLWithPath: vmiPath, isDirectory: false, relativeTo: nil)
 				let vmiFileName = url.pathComponents.last!
 				if vmiFileName == vmsFileName {
-					found = false
+					found = true
 					break
 				}
 			}
