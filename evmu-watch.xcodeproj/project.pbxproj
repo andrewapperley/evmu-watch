@@ -93,6 +93,10 @@
 		0FD8025F23FD7518007A150A /* FLPPYBRD.vms in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8025223FD7518007A150A /* FLPPYBRD.vms */; };
 		0FD8026023FD7518007A150A /* SoulCalibur.vms in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8025323FD7518007A150A /* SoulCalibur.vms */; };
 		0FD8026123FD7518007A150A /* SoulCalibur.vms in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8025323FD7518007A150A /* SoulCalibur.vms */; };
+		0FD8026423FD780D007A150A /* JetGrindSys2.dci in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8026223FD780C007A150A /* JetGrindSys2.dci */; };
+		0FD8026523FD780D007A150A /* JetGrindSys2.dci in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8026223FD780C007A150A /* JetGrindSys2.dci */; };
+		0FD8026623FD780D007A150A /* marvel-vs-capcom-2.186.dci in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8026323FD780C007A150A /* marvel-vs-capcom-2.186.dci */; };
+		0FD8026723FD780D007A150A /* marvel-vs-capcom-2.186.dci in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8026323FD780C007A150A /* marvel-vs-capcom-2.186.dci */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -268,6 +272,8 @@
 		0FD8025123FD7518007A150A /* chaoadv2.dci */ = {isa = PBXFileReference; lastKnownFileType = file; path = chaoadv2.dci; sourceTree = "<group>"; };
 		0FD8025223FD7518007A150A /* FLPPYBRD.vms */ = {isa = PBXFileReference; lastKnownFileType = file; path = FLPPYBRD.vms; sourceTree = "<group>"; };
 		0FD8025323FD7518007A150A /* SoulCalibur.vms */ = {isa = PBXFileReference; lastKnownFileType = file; path = SoulCalibur.vms; sourceTree = "<group>"; };
+		0FD8026223FD780C007A150A /* JetGrindSys2.dci */ = {isa = PBXFileReference; lastKnownFileType = file; path = JetGrindSys2.dci; sourceTree = "<group>"; };
+		0FD8026323FD780C007A150A /* marvel-vs-capcom-2.186.dci */ = {isa = PBXFileReference; lastKnownFileType = file; path = "marvel-vs-capcom-2.186.dci"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -546,6 +552,8 @@
 		0F52102622B69B180054BBFC /* files */ = {
 			isa = PBXGroup;
 			children = (
+				0FD8026223FD780C007A150A /* JetGrindSys2.dci */,
+				0FD8026323FD780C007A150A /* marvel-vs-capcom-2.186.dci */,
 				0FD8025123FD7518007A150A /* chaoadv2.dci */,
 				0FD8024D23FD7518007A150A /* extra_bg_lights.vmi */,
 				0FD8024F23FD7518007A150A /* extra_bg_lights.vms */,
@@ -690,6 +698,7 @@
 				0FD8025C23FD7518007A150A /* chaoadv2.dci in Resources */,
 				0FD8025623FD7518007A150A /* SoulCalibur.vmi in Resources */,
 				0F520C3C22B57D3A0054BBFC /* Assets.xcassets in Resources */,
+				0FD8026623FD780D007A150A /* marvel-vs-capcom-2.186.dci in Resources */,
 				0F54A32F2337E4C300829BE7 /* pacman.dci in Resources */,
 				0FD8025E23FD7518007A150A /* FLPPYBRD.vms in Resources */,
 				0F968BD922EF714900E594CA /* chao adventure.dci in Resources */,
@@ -697,6 +706,7 @@
 				0FD8025823FD7518007A150A /* extra_bg_lights.vms in Resources */,
 				0FD8026023FD7518007A150A /* SoulCalibur.vms in Resources */,
 				0F520C3A22B57D390054BBFC /* Interface.storyboard in Resources */,
+				0FD8026423FD780D007A150A /* JetGrindSys2.dci in Resources */,
 				0FD8025A23FD7518007A150A /* FLPPYBRD.vmi in Resources */,
 				0FD8025423FD7518007A150A /* extra_bg_lights.vmi in Resources */,
 			);
@@ -718,10 +728,12 @@
 				0F52100022B59C4E0054BBFC /* gyro_video_ios.inl in Resources */,
 				0F52100122B59C4E0054BBFC /* gyro_input_ios.inl in Resources */,
 				0F968BD822EF714900E594CA /* chao adventure 1.dci in Resources */,
+				0FD8026523FD780D007A150A /* JetGrindSys2.dci in Resources */,
 				0F54A3302337E4C300829BE7 /* pacman.dci in Resources */,
 				0F520FF822B5967E0054BBFC /* gyro_math_common.inl in Resources */,
 				0F520C4C22B57D3B0054BBFC /* Assets.xcassets in Resources */,
 				0F39F3A322BA596900782403 /* gyro_file_x86.inl in Resources */,
+				0FD8026723FD780D007A150A /* marvel-vs-capcom-2.186.dci in Resources */,
 				0FD8025923FD7518007A150A /* extra_bg_lights.vms in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
