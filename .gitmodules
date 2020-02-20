@@ -1,0 +1,4 @@
+[submodule "evmu-core"]
+	path = evmu-core
+	url = git@chaosrift.endofinternet.org:open-source/evmu-core.git
+	branch = evmu-watch
