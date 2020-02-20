@@ -77,27 +77,32 @@ class StateManagementController: WKInterfaceController {
 			let row = loadSlotList.rowController(at: index) as! StateManagementTableRowController
 			row.slot = index
 			row.path = state.value.state
-//			let dateText = state.value.state!.split(separator: "|").last!
-//			let formatter = DateFormatter()
-//			formatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
-//			let date = formatter.date(from: String(dateText))!
-//			let calendar = Calendar.current
-//			let components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: date)
-//			let formattedDate = calendar.date(from: components)!
-//			row.dateLabel.setText(formattedDate.description)
+			if let extractedDate = state.value.state?.split(separator: "|").last, let formattedDate = generateStateSaveDate(dateText: String(extractedDate)) {
+				row.dateLabel.setText(formattedDate)
+			}
+			
 			row.screenshotImage.setImage(UIImage(contentsOfFile: state.value.screenshot!.path)!)
 			row.delegate = self
 		}
 	}
+	
+	private func generateStateSaveDate(dateText: String?) -> String? {
+		guard let dateText = dateText, let timeInterval = TimeInterval(dateText) else { return nil }
+		let date = Date(timeIntervalSince1970: timeInterval)
+		let formatter = DateFormatter()
+		formatter.dateStyle = .short
+		formatter.timeStyle = .short
+		return formatter.string(from: date)
+	}
 }
-// Generate screenshot, save screenshot with sav file, display image in Load slots row
+
 extension StateManagementController: StateManagementControllerDelegate {
 	@IBAction func didSaveState() {
 		let path: String
 		guard
 			let appName = delegate?.currentAppName,
 			let screenshot = delegate?.currentScreenshot else { return }
-		path = "\(appName)|\(Date())"
+		path = "\(appName)|\(Date().timeIntervalSince1970)"
 		let data = Data()
 		
 		do {

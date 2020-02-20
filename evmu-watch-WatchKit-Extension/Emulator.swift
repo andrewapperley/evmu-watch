@@ -112,8 +112,6 @@ extension Emulator: InputHandling {
 			inputMap.sleep.append(finished ? 0 : 1)
 		case .mode:
 			inputMap.mode.append(finished ? 0 : 1)
-		@unknown default:
-			print("Unknown input was activated")
 		}
 	}
 }
