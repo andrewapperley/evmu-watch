@@ -48,6 +48,7 @@ protocol EmulatorDelegate: class {
 
 protocol InputHandling {
 	func updateInputMap(input: InputMap.Inputs, finished: Bool)
+	func processInputQueue()
 }
 
 protocol StateManagement {
@@ -56,7 +57,6 @@ protocol StateManagement {
 }
 
 class Emulator {
-	let screenScalar: Int = 3
 	var paletteColor: CGColor = UserDefaults.getPalette()
 	var inputMap = InputMap()
 	var currentRomPath: String? = nil
@@ -112,6 +112,40 @@ extension Emulator: InputHandling {
 			inputMap.sleep.append(finished ? 0 : 1)
 		case .mode:
 			inputMap.mode.append(finished ? 0 : 1)
+		}
+	}
+	
+	func processInputQueue() {
+		if !inputMap.up.isEmpty {
+			gyVmuButtonStateSet(device, .init(0), inputMap.up.remove(at: 0))
+		}
+		
+		if !inputMap.down.isEmpty {
+			gyVmuButtonStateSet(device, .init(1), inputMap.down.remove(at: 0))
+		}
+		
+		if !inputMap.left.isEmpty {
+			gyVmuButtonStateSet(device, .init(2), inputMap.left.remove(at: 0))
+		}
+		
+		if !inputMap.right.isEmpty {
+			gyVmuButtonStateSet(device, .init(3), inputMap.right.remove(at: 0))
+		}
+		
+		if !inputMap.a.isEmpty {
+			gyVmuButtonStateSet(device, .init(4), inputMap.a.remove(at: 0))
+		}
+		
+		if !inputMap.b.isEmpty {
+			gyVmuButtonStateSet(device, .init(5), inputMap.b.remove(at: 0))
+		}
+		
+		if !inputMap.mode.isEmpty {
+			gyVmuButtonStateSet(device, .init(6), inputMap.mode.remove(at: 0))
+		}
+		
+		if !inputMap.sleep.isEmpty {
+			gyVmuButtonStateSet(device, .init(7), inputMap.sleep.remove(at: 0))
 		}
 	}
 }
