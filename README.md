@@ -4,30 +4,30 @@
   <img src="./icon.png" width="250" />
 </p>
 
-EVMU Watch is a port of EVMU, a Dreamcast VMU emulator, for the Apple Watch.
+![State management](./gifs/vmu-state-management.gif)
+<!-- ![GIOVANNI](banner.png) -->
 
-## Progression
+**EVMU Watch is a port of EVMU, a Dreamcast VMU emulator, for the Apple Watch**
 
-### Got the emulator running
+## Installation
 
-![](./gifs/vmu-running.gif)
+EVMU Watch uses git submodules for it's dependencies, EVMU Core [EVMU Core](http://chaosrift.endofinternet.net/open-source/evmu-core) which is a lightweight C VMU emulator, and LibGimbal [LibGimbal](https://github.com/gyrovorbis/libgimbal) a powerful cross platform type system written in C17/C++20. When cloning, ensure submodules are also pulled down:
 
-### First version of Input
+``` bash
+$ git clone --recursive git@github.com:andrewapperley/evmu-watch.git
+```
 
-![](./gifs/vmu-input.gif)
+To run on your Apple Watch:
+// TODO
 
-### Revised version of Input
+## Usage
 
-![](./gifs/vmu-input-2.gif)
+// TODO
 
-### ROM selection
+## Troubleshooting
 
-![](./gifs/vmu-rom-selection.gif)
+// TODO
 
-### Palettes
+## Known Issues
 
-![](./gifs/vmu-palette.gif)
-
-### State Management
-
-![](./gifs/vmu-state-management.gif)
+// TODO
