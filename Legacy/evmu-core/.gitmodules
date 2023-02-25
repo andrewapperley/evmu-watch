@@ -1,0 +1,6 @@
+[submodule "lib/lib/libgimbal"]
+	path = lib/lib/libgimbal
+	url = ../../open-source/libgimbal.git
+[submodule "legacy/libGyro"]
+	path = legacy/libGyro
+	url = ../libGyro.git

@@ -1,0 +1,807 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F18C22129A71ED500A260D2 /* EVMU Watch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0F18C22029A71ED500A260D2 /* EVMU Watch WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0F18C22729A71ED500A260D2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F18C22529A71ED500A260D2 /* Interface.storyboard */; };
+		0F18C22929A71EDA00A260D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F18C22829A71EDA00A260D2 /* Assets.xcassets */; };
+		0F18C22F29A71EDA00A260D2 /* EVMU Watch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0F18C22E29A71EDA00A260D2 /* EVMU Watch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0F18C23529A71EDA00A260D2 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F18C23429A71EDA00A260D2 /* InterfaceController.m */; };
+		0F18C23829A71EDA00A260D2 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F18C23729A71EDA00A260D2 /* ExtensionDelegate.m */; };
+		0F18C23B29A71EDA00A260D2 /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F18C23A29A71EDA00A260D2 /* ComplicationController.m */; };
+		0F18C23D29A71EDC00A260D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F18C23C29A71EDC00A260D2 /* Assets.xcassets */; };
+		0F18C24829A71EDC00A260D2 /* EVMU_WatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F18C24729A71EDC00A260D2 /* EVMU_WatchTests.m */; };
+		0F18C25229A71EDC00A260D2 /* EVMU_WatchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F18C25129A71EDC00A260D2 /* EVMU_WatchUITests.m */; };
+		0F18C25429A71EDC00A260D2 /* EVMU_WatchUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F18C25329A71EDC00A260D2 /* EVMU_WatchUITestsLaunchTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0F18C22229A71ED500A260D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F18C21629A71ED500A260D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F18C21F29A71ED500A260D2;
+			remoteInfo = "EVMU Watch WatchKit App";
+		};
+		0F18C23029A71EDA00A260D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F18C21629A71ED500A260D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F18C22D29A71EDA00A260D2;
+			remoteInfo = "EVMU Watch WatchKit Extension";
+		};
+		0F18C24429A71EDC00A260D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F18C21629A71ED500A260D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F18C22D29A71EDA00A260D2;
+			remoteInfo = "EVMU Watch WatchKit Extension";
+		};
+		0F18C24E29A71EDC00A260D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F18C21629A71ED500A260D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F18C21F29A71ED500A260D2;
+			remoteInfo = "EVMU Watch WatchKit App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0F18C25A29A71EDC00A260D2 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0F18C22F29A71EDA00A260D2 /* EVMU Watch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F18C25E29A71EDC00A260D2 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				0F18C22129A71ED500A260D2 /* EVMU Watch WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0F18C21C29A71ED500A260D2 /* EVMU Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EVMU Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F18C22029A71ED500A260D2 /* EVMU Watch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EVMU Watch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F18C22629A71ED500A260D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		0F18C22829A71EDA00A260D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0F18C22E29A71EDA00A260D2 /* EVMU Watch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EVMU Watch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F18C23329A71EDA00A260D2 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		0F18C23429A71EDA00A260D2 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		0F18C23629A71EDA00A260D2 /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		0F18C23729A71EDA00A260D2 /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		0F18C23929A71EDA00A260D2 /* ComplicationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComplicationController.h; sourceTree = "<group>"; };
+		0F18C23A29A71EDA00A260D2 /* ComplicationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComplicationController.m; sourceTree = "<group>"; };
+		0F18C23C29A71EDC00A260D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0F18C23E29A71EDC00A260D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F18C24329A71EDC00A260D2 /* EVMU WatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EVMU WatchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F18C24729A71EDC00A260D2 /* EVMU_WatchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EVMU_WatchTests.m; sourceTree = "<group>"; };
+		0F18C24D29A71EDC00A260D2 /* EVMU WatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EVMU WatchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F18C25129A71EDC00A260D2 /* EVMU_WatchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EVMU_WatchUITests.m; sourceTree = "<group>"; };
+		0F18C25329A71EDC00A260D2 /* EVMU_WatchUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EVMU_WatchUITestsLaunchTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0F18C22B29A71EDA00A260D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F18C24029A71EDC00A260D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F18C24A29A71EDC00A260D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F18C21529A71ED500A260D2 = {
+			isa = PBXGroup;
+			children = (
+				0F18C22429A71ED500A260D2 /* EVMU Watch WatchKit App */,
+				0F18C23229A71EDA00A260D2 /* EVMU Watch WatchKit Extension */,
+				0F18C24629A71EDC00A260D2 /* EVMU WatchTests */,
+				0F18C25029A71EDC00A260D2 /* EVMU WatchUITests */,
+				0F18C21D29A71ED500A260D2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0F18C21D29A71ED500A260D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F18C21C29A71ED500A260D2 /* EVMU Watch.app */,
+				0F18C22029A71ED500A260D2 /* EVMU Watch WatchKit App.app */,
+				0F18C22E29A71EDA00A260D2 /* EVMU Watch WatchKit Extension.appex */,
+				0F18C24329A71EDC00A260D2 /* EVMU WatchTests.xctest */,
+				0F18C24D29A71EDC00A260D2 /* EVMU WatchUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0F18C22429A71ED500A260D2 /* EVMU Watch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				0F18C22529A71ED500A260D2 /* Interface.storyboard */,
+				0F18C22829A71EDA00A260D2 /* Assets.xcassets */,
+			);
+			path = "EVMU Watch WatchKit App";
+			sourceTree = "<group>";
+		};
+		0F18C23229A71EDA00A260D2 /* EVMU Watch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0F18C23329A71EDA00A260D2 /* InterfaceController.h */,
+				0F18C23429A71EDA00A260D2 /* InterfaceController.m */,
+				0F18C23629A71EDA00A260D2 /* ExtensionDelegate.h */,
+				0F18C23729A71EDA00A260D2 /* ExtensionDelegate.m */,
+				0F18C23929A71EDA00A260D2 /* ComplicationController.h */,
+				0F18C23A29A71EDA00A260D2 /* ComplicationController.m */,
+				0F18C23C29A71EDC00A260D2 /* Assets.xcassets */,
+				0F18C23E29A71EDC00A260D2 /* Info.plist */,
+			);
+			path = "EVMU Watch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		0F18C24629A71EDC00A260D2 /* EVMU WatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				0F18C24729A71EDC00A260D2 /* EVMU_WatchTests.m */,
+			);
+			path = "EVMU WatchTests";
+			sourceTree = "<group>";
+		};
+		0F18C25029A71EDC00A260D2 /* EVMU WatchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0F18C25129A71EDC00A260D2 /* EVMU_WatchUITests.m */,
+				0F18C25329A71EDC00A260D2 /* EVMU_WatchUITestsLaunchTests.m */,
+			);
+			path = "EVMU WatchUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0F18C21B29A71ED500A260D2 /* EVMU Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F18C25F29A71EDC00A260D2 /* Build configuration list for PBXNativeTarget "EVMU Watch" */;
+			buildPhases = (
+				0F18C21A29A71ED500A260D2 /* Resources */,
+				0F18C25E29A71EDC00A260D2 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F18C22329A71ED500A260D2 /* PBXTargetDependency */,
+			);
+			name = "EVMU Watch";
+			productName = "EVMU Watch";
+			productReference = 0F18C21C29A71ED500A260D2 /* EVMU Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		0F18C21F29A71ED500A260D2 /* EVMU Watch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F18C25B29A71EDC00A260D2 /* Build configuration list for PBXNativeTarget "EVMU Watch WatchKit App" */;
+			buildPhases = (
+				0F18C21E29A71ED500A260D2 /* Resources */,
+				0F18C25A29A71EDC00A260D2 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F18C23129A71EDA00A260D2 /* PBXTargetDependency */,
+			);
+			name = "EVMU Watch WatchKit App";
+			productName = "EVMU Watch WatchKit App";
+			productReference = 0F18C22029A71ED500A260D2 /* EVMU Watch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		0F18C22D29A71EDA00A260D2 /* EVMU Watch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F18C25729A71EDC00A260D2 /* Build configuration list for PBXNativeTarget "EVMU Watch WatchKit Extension" */;
+			buildPhases = (
+				0F18C22A29A71EDA00A260D2 /* Sources */,
+				0F18C22B29A71EDA00A260D2 /* Frameworks */,
+				0F18C22C29A71EDA00A260D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EVMU Watch WatchKit Extension";
+			productName = "EVMU Watch WatchKit Extension";
+			productReference = 0F18C22E29A71EDA00A260D2 /* EVMU Watch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		0F18C24229A71EDC00A260D2 /* EVMU WatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F18C26229A71EDC00A260D2 /* Build configuration list for PBXNativeTarget "EVMU WatchTests" */;
+			buildPhases = (
+				0F18C23F29A71EDC00A260D2 /* Sources */,
+				0F18C24029A71EDC00A260D2 /* Frameworks */,
+				0F18C24129A71EDC00A260D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F18C24529A71EDC00A260D2 /* PBXTargetDependency */,
+			);
+			name = "EVMU WatchTests";
+			productName = "EVMU WatchTests";
+			productReference = 0F18C24329A71EDC00A260D2 /* EVMU WatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0F18C24C29A71EDC00A260D2 /* EVMU WatchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F18C26529A71EDC00A260D2 /* Build configuration list for PBXNativeTarget "EVMU WatchUITests" */;
+			buildPhases = (
+				0F18C24929A71EDC00A260D2 /* Sources */,
+				0F18C24A29A71EDC00A260D2 /* Frameworks */,
+				0F18C24B29A71EDC00A260D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F18C24F29A71EDC00A260D2 /* PBXTargetDependency */,
+			);
+			name = "EVMU WatchUITests";
+			productName = "EVMU WatchUITests";
+			productReference = 0F18C24D29A71EDC00A260D2 /* EVMU WatchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0F18C21629A71ED500A260D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					0F18C21B29A71ED500A260D2 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					0F18C21F29A71ED500A260D2 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					0F18C22D29A71EDA00A260D2 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					0F18C24229A71EDC00A260D2 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 0F18C22D29A71EDA00A260D2;
+					};
+					0F18C24C29A71EDC00A260D2 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 0F18C21F29A71ED500A260D2;
+					};
+				};
+			};
+			buildConfigurationList = 0F18C21929A71ED500A260D2 /* Build configuration list for PBXProject "EVMU Watch" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0F18C21529A71ED500A260D2;
+			productRefGroup = 0F18C21D29A71ED500A260D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0F18C21B29A71ED500A260D2 /* EVMU Watch */,
+				0F18C21F29A71ED500A260D2 /* EVMU Watch WatchKit App */,
+				0F18C22D29A71EDA00A260D2 /* EVMU Watch WatchKit Extension */,
+				0F18C24229A71EDC00A260D2 /* EVMU WatchTests */,
+				0F18C24C29A71EDC00A260D2 /* EVMU WatchUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F18C21A29A71ED500A260D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F18C21E29A71ED500A260D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F18C22929A71EDA00A260D2 /* Assets.xcassets in Resources */,
+				0F18C22729A71ED500A260D2 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F18C22C29A71EDA00A260D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F18C23D29A71EDC00A260D2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F18C24129A71EDC00A260D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F18C24B29A71EDC00A260D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0F18C22A29A71EDA00A260D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F18C23B29A71EDA00A260D2 /* ComplicationController.m in Sources */,
+				0F18C23829A71EDA00A260D2 /* ExtensionDelegate.m in Sources */,
+				0F18C23529A71EDA00A260D2 /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F18C23F29A71EDC00A260D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F18C24829A71EDC00A260D2 /* EVMU_WatchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F18C24929A71EDC00A260D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F18C25229A71EDC00A260D2 /* EVMU_WatchUITests.m in Sources */,
+				0F18C25429A71EDC00A260D2 /* EVMU_WatchUITestsLaunchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0F18C22329A71ED500A260D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F18C21F29A71ED500A260D2 /* EVMU Watch WatchKit App */;
+			targetProxy = 0F18C22229A71ED500A260D2 /* PBXContainerItemProxy */;
+		};
+		0F18C23129A71EDA00A260D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F18C22D29A71EDA00A260D2 /* EVMU Watch WatchKit Extension */;
+			targetProxy = 0F18C23029A71EDA00A260D2 /* PBXContainerItemProxy */;
+		};
+		0F18C24529A71EDC00A260D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F18C22D29A71EDA00A260D2 /* EVMU Watch WatchKit Extension */;
+			targetProxy = 0F18C24429A71EDC00A260D2 /* PBXContainerItemProxy */;
+		};
+		0F18C24F29A71EDC00A260D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F18C21F29A71ED500A260D2 /* EVMU Watch WatchKit App */;
+			targetProxy = 0F18C24E29A71EDC00A260D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0F18C22529A71ED500A260D2 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F18C22629A71ED500A260D2 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0F18C25529A71EDC00A260D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0F18C25629A71EDC00A260D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0F18C25829A71EDC00A260D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TA9QDV9Z9L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EVMU Watch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "EVMU Watch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = ComplicationController;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = ExtensionDelegate;
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.andrewapperley.evmu-watch.EVMU-Watch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		0F18C25929A71EDC00A260D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TA9QDV9Z9L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EVMU Watch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "EVMU Watch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = ComplicationController;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = ExtensionDelegate;
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.andrewapperley.evmu-watch.EVMU-Watch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		0F18C25C29A71EDC00A260D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TA9QDV9Z9L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = EVMU_Watch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "EVMU Watch WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.andrewapperley.evmu-watch.EVMU-Watch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		0F18C25D29A71EDC00A260D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TA9QDV9Z9L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = EVMU_Watch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "EVMU Watch WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.andrewapperley.evmu-watch.EVMU-Watch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		0F18C26029A71EDC00A260D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TA9QDV9Z9L;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.andrewapperley.evmu-watch.EVMU-Watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0F18C26129A71EDC00A260D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TA9QDV9Z9L;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.andrewapperley.evmu-watch.EVMU-Watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0F18C26329A71EDC00A260D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TA9QDV9Z9L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.andrewapperley.evmu-watch.EVMU-WatchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EVMU Watch WatchKit Extension.appex/EVMU Watch WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		0F18C26429A71EDC00A260D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TA9QDV9Z9L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.andrewapperley.evmu-watch.EVMU-WatchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EVMU Watch WatchKit Extension.appex/EVMU Watch WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		0F18C26629A71EDC00A260D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TA9QDV9Z9L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.andrewapperley.evmu-watch.EVMU-WatchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "EVMU Watch WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		0F18C26729A71EDC00A260D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TA9QDV9Z9L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.andrewapperley.evmu-watch.EVMU-WatchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "EVMU Watch WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F18C21929A71ED500A260D2 /* Build configuration list for PBXProject "EVMU Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F18C25529A71EDC00A260D2 /* Debug */,
+				0F18C25629A71EDC00A260D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F18C25729A71EDC00A260D2 /* Build configuration list for PBXNativeTarget "EVMU Watch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F18C25829A71EDC00A260D2 /* Debug */,
+				0F18C25929A71EDC00A260D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F18C25B29A71EDC00A260D2 /* Build configuration list for PBXNativeTarget "EVMU Watch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F18C25C29A71EDC00A260D2 /* Debug */,
+				0F18C25D29A71EDC00A260D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F18C25F29A71EDC00A260D2 /* Build configuration list for PBXNativeTarget "EVMU Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F18C26029A71EDC00A260D2 /* Debug */,
+				0F18C26129A71EDC00A260D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F18C26229A71EDC00A260D2 /* Build configuration list for PBXNativeTarget "EVMU WatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F18C26329A71EDC00A260D2 /* Debug */,
+				0F18C26429A71EDC00A260D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F18C26529A71EDC00A260D2 /* Build configuration list for PBXNativeTarget "EVMU WatchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F18C26629A71EDC00A260D2 /* Debug */,
+				0F18C26729A71EDC00A260D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0F18C21629A71ED500A260D2 /* Project object */;
+}
