@@ -1,4 +1,3 @@
-[submodule "evmu-core"]
-	path = evmu-core
+[submodule "EVMU Watch/evmu-core"]
+	path = EVMU Watch/evmu-core
 	url = git@chaosrift.endofinternet.net:open-source/evmu-core.git
-	branch = libgimbal-refactor
